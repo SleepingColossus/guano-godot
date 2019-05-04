@@ -11,7 +11,7 @@ public class DestroyOnContact : MonoBehaviour
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
         gameState.UpdateScore(points);
         
-        Destroy(other.gameObject);
+        other.GetComponent<MovingTarget>().Die();
         Destroy(gameObject);
     }
 }
