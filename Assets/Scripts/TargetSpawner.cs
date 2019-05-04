@@ -5,23 +5,20 @@ using UnityEngine;
 public class TargetSpawner : MonoBehaviour
 {
     public GameObject[] prefabs;
-    public float delay = 2.0f;
+    public float minDelay = 2.0f;
+    public float maxDelay = 4.0f;
+    private float _delay;
     public bool active = true;
 
     void Start()
     {
+        ResetDelay();
         StartCoroutine(TargetGenerator());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private IEnumerator TargetGenerator()
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(_delay);
 
         if (active)
         {
@@ -29,8 +26,14 @@ public class TargetSpawner : MonoBehaviour
             var newTrasform = transform;
 
             Instantiate(prefab, newTrasform.position, Quaternion.identity);
+            ResetDelay();
         }
 
         StartCoroutine(TargetGenerator());
+    }
+
+    private void ResetDelay()
+    {
+        _delay = Random.Range(minDelay, maxDelay);
     }
 }
