@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 512968506878942790}
   - component: {fileID: 512968506878942789}
   - component: {fileID: 1682116121365822685}
+  - component: {fileID: 7067022730552433515}
   m_Layer: 0
   m_Name: Bus
   m_TagString: Untagged
@@ -162,3 +163,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &7067022730552433515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512968506878942809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ba72821ca283b45ac0b66e152c87d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsAwarded: 5
+  ammoAwarded: 0
