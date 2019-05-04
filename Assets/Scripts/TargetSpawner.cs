@@ -9,6 +9,7 @@ public class TargetSpawner : MonoBehaviour
     public float maxDelay = 4.0f;
     private float _delay;
     public bool active = true;
+    public float zLayer;
 
     void Start()
     {
@@ -23,9 +24,9 @@ public class TargetSpawner : MonoBehaviour
         if (active)
         {
             var prefab = prefabs[Random.Range(0, prefabs.Length)];
-            var newTrasform = transform;
+            var position = new Vector3(transform.position.x, transform.position.y, zLayer); 
 
-            Instantiate(prefab, newTrasform.position, Quaternion.identity);
+            Instantiate(prefab, position, Quaternion.identity);
             ResetDelay();
         }
 
