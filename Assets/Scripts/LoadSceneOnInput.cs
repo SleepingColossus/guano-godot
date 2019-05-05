@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InputListener : MonoBehaviour
+public class LoadSceneOnInput : MonoBehaviour
 {
+    public string sceneName;
     private void Update()
     {
         if (Input.anyKeyDown)
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
