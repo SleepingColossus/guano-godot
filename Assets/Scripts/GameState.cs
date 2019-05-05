@@ -9,6 +9,11 @@ public class GameState : MonoBehaviour
     public Text scoreText;
     public Text ammoText;
 
+    private void Start()
+    {
+        ScoreTracker.Score = score;
+    }
+
     public void UpdateScore(int amount)
     {
         score += amount;
