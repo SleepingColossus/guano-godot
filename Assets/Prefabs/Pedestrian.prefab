@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: -1.2, y: 0}
+  deathRotationVelocity: 0
+  flipOnDeath: 1
 --- !u!114 &9157110026658223327
 MonoBehaviour:
   m_ObjectHideFlags: 0
