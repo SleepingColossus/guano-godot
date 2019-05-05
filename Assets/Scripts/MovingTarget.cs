@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovingTarget : MonoBehaviour
 {
     public Vector2 velocity;
-    private Rigidbody2D _body;
+    public float deathRotationVelocity;
+    public bool flipOnDeath;
 
+    private Rigidbody2D _body;
     private bool _alive = true;
 
     // 1 = up, -1 = down
@@ -34,7 +34,10 @@ public class MovingTarget : MonoBehaviour
 
             if (deathDirection == -1)
             {
-                _spriteRenderer.flipY = true;
+                if (flipOnDeath)
+                {
+                    _spriteRenderer.flipY = true;
+                }
             }
 
             _body.velocity = new Vector2(-1.5f, 3.0f * deathDirection);
@@ -49,5 +52,6 @@ public class MovingTarget : MonoBehaviour
     public void Die()
     {
         _alive = false;
+        _body.angularVelocity = deathRotationVelocity;
     }
 }
