@@ -7,6 +7,7 @@ public class MovingTarget : MonoBehaviour
     public bool flipOnDeath;
 
     private Rigidbody2D _body;
+    private AudioSource _audioSource;
     private bool _alive = true;
 
     // 1 = up, -1 = down
@@ -17,6 +18,7 @@ public class MovingTarget : MonoBehaviour
     {
         _body = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -53,5 +55,6 @@ public class MovingTarget : MonoBehaviour
     {
         _alive = false;
         _body.angularVelocity = deathRotationVelocity;
+        _audioSource.Play();
     }
 }
