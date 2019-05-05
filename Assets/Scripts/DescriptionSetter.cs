@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class DescriptionSetter : MonoBehaviour
 {
+    public string characterName;
     public DescriptionType descriptionType;
     public Reward reward;
     private Text _descriptionText;
@@ -14,6 +15,6 @@ public class DescriptionSetter : MonoBehaviour
         var amount = descriptionType == DescriptionType.Ammo ? reward.ammoAwarded : reward.pointsAwarded; 
         var resource = descriptionType == DescriptionType.Ammo ? "ammo" : "points";
 
-        _descriptionText.text = $"Awards {amount} {resource}";
+        _descriptionText.text = $"{characterName}\nAwards {amount} {resource}";
     }
 }

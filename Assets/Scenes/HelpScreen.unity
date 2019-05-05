@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf4ac4b277ed04eb56f379d908cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Old Lady
   descriptionType: 1
   reward: {fileID: 1360861972}
 --- !u!1001 &261889494
@@ -557,6 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf4ac4b277ed04eb56f379d908cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Skater
   descriptionType: 1
   reward: {fileID: 1913658178}
 --- !u!1001 &555619000
@@ -725,6 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf4ac4b277ed04eb56f379d908cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Cyclist
   descriptionType: 1
   reward: {fileID: 730788626}
 --- !u!114 &730788626 stripped
@@ -837,6 +840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf4ac4b277ed04eb56f379d908cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Car
   descriptionType: 1
   reward: {fileID: 1521611518}
 --- !u!1 &767289757
@@ -931,6 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf4ac4b277ed04eb56f379d908cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Pedestrian
   descriptionType: 1
   reward: {fileID: 1187391536}
 --- !u!1 &786845641
@@ -1025,6 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf4ac4b277ed04eb56f379d908cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Bus
   descriptionType: 1
   reward: {fileID: 28347519}
 --- !u!1 &913497975
@@ -1523,6 +1529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf4ac4b277ed04eb56f379d908cfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Bread
   descriptionType: 0
   reward: {fileID: 1452090827}
 --- !u!114 &1666940173
