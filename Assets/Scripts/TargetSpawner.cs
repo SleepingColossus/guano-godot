@@ -7,13 +7,14 @@ public class TargetSpawner : MonoBehaviour
     public GameObject[] prefabs;
     public float minDelay = 2.0f;
     public float maxDelay = 4.0f;
+    public float initialDelay;
     private float _delay;
     public bool active = true;
     public float zLayer;
 
     void Start()
     {
-        ResetDelay();
+        _delay = initialDelay;
         StartCoroutine(TargetGenerator());
     }
 
