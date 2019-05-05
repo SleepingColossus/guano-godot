@@ -13,6 +13,8 @@ public class GameState : MonoBehaviour
     {
         score += amount;
         scoreText.text = $"SCORE: {score}";
+
+        ScoreTracker.Score = score;
     }
 
     public void UpdateAmmo(int amount)

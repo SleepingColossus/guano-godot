@@ -7,7 +7,7 @@ public class DestroyOnContact : MonoBehaviour
     {
         var reward = other.GetComponent<Reward>();
 
-        // find better solution
+        // TODO: find better solution
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
         gameState.UpdateScore(reward.pointsAwarded);
         gameState.UpdateAmmo(reward.ammoAwarded);
