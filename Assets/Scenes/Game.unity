@@ -1075,7 +1075,7 @@ PrefabInstance:
     - target: {fileID: 3496618241276562138, guid: 56be0c7450c31044694f7feec054f627,
         type: 3}
       propertyPath: zLayer
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3496618241276562138, guid: 56be0c7450c31044694f7feec054f627,
         type: 3}
@@ -1519,7 +1519,7 @@ PrefabInstance:
     - target: {fileID: 3496618241276562138, guid: 56be0c7450c31044694f7feec054f627,
         type: 3}
       propertyPath: zLayer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3496618241276562138, guid: 56be0c7450c31044694f7feec054f627,
         type: 3}
@@ -1940,6 +1940,11 @@ PrefabInstance:
       propertyPath: maxDelay
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3496618241276562138, guid: 56be0c7450c31044694f7feec054f627,
+        type: 3}
+      propertyPath: zLayer
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56be0c7450c31044694f7feec054f627, type: 3}
 --- !u!1001 &3496618240630414314
@@ -2022,7 +2027,7 @@ PrefabInstance:
     - target: {fileID: 3496618241276562138, guid: 56be0c7450c31044694f7feec054f627,
         type: 3}
       propertyPath: zLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3496618241276562138, guid: 56be0c7450c31044694f7feec054f627,
         type: 3}
