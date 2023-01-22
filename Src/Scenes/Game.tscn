@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://i65y4ddutirh"]
+[gd_scene load_steps=4 format=3 uid="uid://i65y4ddutirh"]
 
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
 [ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="2_71881"]
+[ext_resource type="PackedScene" uid="uid://dcvl7p84hhypb" path="res://GameObjects/Clouds/CloudSpawner.tscn" id="3_8u6c6"]
 
 [node name="Game" type="Node2D"]
 
@@ -11,3 +12,11 @@ position = Vector2(143, 123)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_71881")
 autoplay = true
+
+[node name="CloudSpawners" type="Node2D" parent="."]
+
+[node name="CloudSpawnerTop" parent="CloudSpawners" instance=ExtResource("3_8u6c6")]
+position = Vector2(1248, 70)
+
+[node name="CloudSpawnerBottom" parent="CloudSpawners" instance=ExtResource("3_8u6c6")]
+position = Vector2(1920, 233)

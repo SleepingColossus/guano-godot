@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcvl7p84hhypb"]
+
+[ext_resource type="Script" path="res://GameObjects/Clouds/CloudSpawner.gd" id="1_oc6ue"]
+[ext_resource type="PackedScene" uid="uid://b8x60ftyn8tub" path="res://GameObjects/Clouds/Cloud1.tscn" id="2_g7jeh"]
+[ext_resource type="PackedScene" uid="uid://dgdvvad001x8" path="res://GameObjects/Clouds/Cloud2.tscn" id="3_7yxg7"]
+[ext_resource type="PackedScene" uid="uid://ho8kr7jllvqv" path="res://GameObjects/Clouds/Cloud3.tscn" id="4_jeerl"]
+
+[node name="CloudSpawner" type="Node2D"]
+script = ExtResource("1_oc6ue")
+clouds = [ExtResource("2_g7jeh"), ExtResource("3_7yxg7"), ExtResource("4_jeerl")]
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
