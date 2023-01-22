@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6nccrbah3eqv"]
+
+[ext_resource type="Texture2D" uid="uid://b6bqe4geop84w" path="res://Sprites/Bird.png" id="1_2mwci"]
+[ext_resource type="Script" path="res://GameObjects/Bird/Bird.gd" id="2_y8gj8"]
+[ext_resource type="PackedScene" uid="uid://b1q81epf3wlrx" path="res://GameObjects/Projectile/Projectile.tscn" id="3_cowpu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_654bx"]
+atlas = ExtResource("1_2mwci")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvfiu"]
+atlas = ExtResource("1_2mwci")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gclvu"]
+atlas = ExtResource("1_2mwci")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vctra"]
+atlas = ExtResource("1_2mwci")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7c6r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_654bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvfiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gclvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vctra")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Bird" type="AnimatedSprite2D"]
+frames = SubResource("SpriteFrames_n7c6r")
+playing = true
+script = ExtResource("2_y8gj8")
+projectile = ExtResource("3_cowpu")
+
+[node name="Cooldown" type="Timer" parent="."]
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
