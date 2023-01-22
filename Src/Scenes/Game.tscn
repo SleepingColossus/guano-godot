@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://i65y4ddutirh"]
+[gd_scene load_steps=5 format=3 uid="uid://i65y4ddutirh"]
 
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
 [ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="2_71881"]
 [ext_resource type="PackedScene" uid="uid://dcvl7p84hhypb" path="res://GameObjects/Clouds/CloudSpawner.tscn" id="3_8u6c6"]
+[ext_resource type="PackedScene" uid="uid://ba40nt4sg0qam" path="res://GameObjects/Roads/RoadSpawner.tscn" id="4_4w3sh"]
 
 [node name="Game" type="Node2D"]
 
@@ -20,3 +21,6 @@ position = Vector2(1248, 70)
 
 [node name="CloudSpawnerBottom" parent="CloudSpawners" instance=ExtResource("3_8u6c6")]
 position = Vector2(1920, 233)
+
+[node name="RoadSpawner" parent="." instance=ExtResource("4_4w3sh")]
+position = Vector2(1400, 475)
