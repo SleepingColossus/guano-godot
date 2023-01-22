@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgdvvad001x8"]
+
+[ext_resource type="Script" path="res://GameObjects/Clouds/Cloud.gd" id="1_r4m60"]
+[ext_resource type="Texture2D" uid="uid://cmketnvm28ry8" path="res://Sprites/Cloud2.png" id="2_dvejh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1i80"]
+size = Vector2(143, 68)
+
+[node name="Cloud1" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_r4m60")
+horizontal_velocity = -20
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dvejh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -5)
+shape = SubResource("RectangleShape2D_x1i80")
