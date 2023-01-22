@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://i65y4ddutirh"]
+
+[ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
+[ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="2_71881"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Bird" parent="." instance=ExtResource("1_k5qe3")]
+position = Vector2(143, 123)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_71881")
+autoplay = true
