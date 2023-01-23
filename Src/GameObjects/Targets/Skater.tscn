@@ -45,7 +45,7 @@ height = 54.0
 
 [node name="Skater" type="CharacterBody2D"]
 script = ExtResource("1_k6cv7")
-movement_speed = -20
+movement_speed = -80
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

@@ -44,7 +44,7 @@ size = Vector2(148, 68)
 
 [node name="Bus" type="CharacterBody2D"]
 script = ExtResource("1_747ml")
-movement_speed = -20
+movement_speed = -100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

@@ -44,7 +44,7 @@ size = Vector2(78, 63)
 
 [node name="Car" type="CharacterBody2D"]
 script = ExtResource("1_ach6w")
-movement_speed = -20
+movement_speed = -100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")
