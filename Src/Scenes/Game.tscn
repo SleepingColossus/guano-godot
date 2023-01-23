@@ -69,13 +69,13 @@ position = Vector2(384, 183)
 [node name="Targets" type="Node2D" parent="."]
 
 [node name="TargetSpawner" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1564, 607)
+position = Vector2(1181, 615)
 targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("12_c81xk"), ExtResource("13_ngjuq")]
 
 [node name="TargetSpawner2" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1682, 496)
+position = Vector2(1299, 504)
 targets = [ExtResource("14_072vv"), ExtResource("15_ei8lp"), ExtResource("16_yhugq")]
 
 [node name="TargetSpawner3" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1821, 422)
+position = Vector2(1438, 430)
 targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("12_c81xk"), ExtResource("13_ngjuq")]
