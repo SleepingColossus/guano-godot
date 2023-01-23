@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://i65y4ddutirh"]
+[gd_scene load_steps=17 format=3 uid="uid://i65y4ddutirh"]
 
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
 [ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="2_71881"]
@@ -8,6 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://dgdvvad001x8" path="res://GameObjects/Clouds/Cloud2.tscn" id="6_t03o3"]
 [ext_resource type="PackedScene" uid="uid://ho8kr7jllvqv" path="res://GameObjects/Clouds/Cloud3.tscn" id="7_yb1an"]
 [ext_resource type="PackedScene" uid="uid://b8x60ftyn8tub" path="res://GameObjects/Clouds/Cloud1.tscn" id="8_47wft"]
+[ext_resource type="PackedScene" uid="uid://cpa2hvc8g0qew" path="res://GameObjects/Targets/TargetSpawner.tscn" id="9_6xgsp"]
+[ext_resource type="PackedScene" uid="uid://b1t5cb853qjhv" path="res://GameObjects/Targets/Bicycle.tscn" id="10_g40k6"]
+[ext_resource type="PackedScene" uid="uid://dwcuvjrb08hmr" path="res://GameObjects/Targets/OldLady.tscn" id="11_rj0as"]
+[ext_resource type="PackedScene" uid="uid://sgpx8e600jyo" path="res://GameObjects/Targets/Pedestrian.tscn" id="12_c81xk"]
+[ext_resource type="PackedScene" uid="uid://dxo64ti5br6gt" path="res://GameObjects/Targets/Skater.tscn" id="13_ngjuq"]
+[ext_resource type="PackedScene" uid="uid://bgmlh00ibo5su" path="res://GameObjects/Targets/Bread.tscn" id="14_072vv"]
+[ext_resource type="PackedScene" uid="uid://b4g3871mlu5h3" path="res://GameObjects/Targets/Bus.tscn" id="15_ei8lp"]
+[ext_resource type="PackedScene" uid="uid://dg2of8shkrpao" path="res://GameObjects/Targets/Car.tscn" id="16_yhugq"]
 
 [node name="Game" type="Node2D"]
 
@@ -57,3 +65,17 @@ position = Vector2(1367, 180)
 
 [node name="Cloud3" parent="Clouds" instance=ExtResource("8_47wft")]
 position = Vector2(384, 183)
+
+[node name="Targets" type="Node2D" parent="."]
+
+[node name="TargetSpawner" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(1564, 607)
+targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("12_c81xk"), ExtResource("13_ngjuq")]
+
+[node name="TargetSpawner2" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(1682, 496)
+targets = [ExtResource("14_072vv"), ExtResource("15_ei8lp"), ExtResource("16_yhugq")]
+
+[node name="TargetSpawner3" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(1821, 422)
+targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("12_c81xk"), ExtResource("13_ngjuq")]
