@@ -68,14 +68,18 @@ position = Vector2(384, 183)
 
 [node name="Targets" type="Node2D" parent="."]
 
-[node name="TargetSpawner" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1181, 615)
+[node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(1189, 599)
 targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("12_c81xk"), ExtResource("13_ngjuq")]
 
-[node name="TargetSpawner2" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1299, 504)
+[node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(1298, 478)
 targets = [ExtResource("14_072vv"), ExtResource("15_ei8lp"), ExtResource("16_yhugq")]
 
-[node name="TargetSpawner3" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1438, 430)
+[node name="TargetSpawnerRoadBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(1474, 536)
+targets = [ExtResource("14_072vv"), ExtResource("15_ei8lp"), ExtResource("16_yhugq")]
+
+[node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(1437, 415)
 targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("12_c81xk"), ExtResource("13_ngjuq")]
