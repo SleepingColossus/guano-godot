@@ -22,3 +22,4 @@ export/convert_text_resources_to_binary=true
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
