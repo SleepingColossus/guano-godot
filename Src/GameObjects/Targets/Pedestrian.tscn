@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://sgpx8e600jyo"]
+
+[ext_resource type="Texture2D" uid="uid://b1uneo3ev1lrd" path="res://Sprites/Pedestrian.png" id="1_20hqa"]
+[ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_nvgpt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpmnk"]
+atlas = ExtResource("1_20hqa")
+region = Rect2(0, 0, 25, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahqsc"]
+atlas = ExtResource("1_20hqa")
+region = Rect2(25, 0, 25, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8kcx"]
+atlas = ExtResource("1_20hqa")
+region = Rect2(50, 0, 25, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wajoi"]
+atlas = ExtResource("1_20hqa")
+region = Rect2(75, 0, 25, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpmnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahqsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8kcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wajoi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cd8xg"]
+radius = 11.0
+height = 44.0
+
+[node name="Pedestrian" type="CharacterBody2D"]
+script = ExtResource("1_nvgpt")
+movement_speed = -20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_4r2kj")
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cd8xg")

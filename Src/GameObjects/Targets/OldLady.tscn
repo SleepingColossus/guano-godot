@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwcuvjrb08hmr"]
+
+[ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_a3udl"]
+[ext_resource type="Texture2D" uid="uid://dxlfq1pccpyds" path="res://Sprites/OldLady.png" id="2_fekmw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0t47"]
+atlas = ExtResource("2_fekmw")
+region = Rect2(0, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hem87"]
+atlas = ExtResource("2_fekmw")
+region = Rect2(55, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efwyu"]
+atlas = ExtResource("2_fekmw")
+region = Rect2(110, 0, 55, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpbh0"]
+atlas = ExtResource("2_fekmw")
+region = Rect2(165, 0, 55, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0t47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hem87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efwyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpbh0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hst3c"]
+size = Vector2(37, 42)
+
+[node name="OldLady" type="CharacterBody2D"]
+script = ExtResource("1_a3udl")
+movement_speed = -20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_4r2kj")
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_hst3c")
