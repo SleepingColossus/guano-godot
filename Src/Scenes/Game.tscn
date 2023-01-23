@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://i65y4ddutirh"]
+[gd_scene load_steps=9 format=3 uid="uid://i65y4ddutirh"]
 
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
 [ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="2_71881"]
 [ext_resource type="PackedScene" uid="uid://dcvl7p84hhypb" path="res://GameObjects/Clouds/CloudSpawner.tscn" id="3_8u6c6"]
 [ext_resource type="PackedScene" uid="uid://ba40nt4sg0qam" path="res://GameObjects/Roads/RoadSpawner.tscn" id="4_4w3sh"]
 [ext_resource type="PackedScene" uid="uid://jexburvvu6qg" path="res://GameObjects/Roads/Road.tscn" id="5_b1n51"]
+[ext_resource type="PackedScene" uid="uid://dgdvvad001x8" path="res://GameObjects/Clouds/Cloud2.tscn" id="6_t03o3"]
+[ext_resource type="PackedScene" uid="uid://ho8kr7jllvqv" path="res://GameObjects/Clouds/Cloud3.tscn" id="7_yb1an"]
+[ext_resource type="PackedScene" uid="uid://b8x60ftyn8tub" path="res://GameObjects/Clouds/Cloud1.tscn" id="8_47wft"]
 
 [node name="Game" type="Node2D"]
 
@@ -14,14 +17,6 @@ position = Vector2(143, 123)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_71881")
 autoplay = true
-
-[node name="CloudSpawners" type="Node2D" parent="."]
-
-[node name="CloudSpawnerTop" parent="CloudSpawners" instance=ExtResource("3_8u6c6")]
-position = Vector2(1248, 70)
-
-[node name="CloudSpawnerBottom" parent="CloudSpawners" instance=ExtResource("3_8u6c6")]
-position = Vector2(1920, 233)
 
 [node name="Roads" type="Node2D" parent="."]
 position = Vector2(0, 4)
@@ -43,3 +38,22 @@ position = Vector2(1050, 469)
 
 [node name="Road5" parent="Roads" instance=ExtResource("5_b1n51")]
 position = Vector2(1350, 469)
+
+[node name="Clouds" type="Node2D" parent="."]
+
+[node name="CloudSpawners" type="Node2D" parent="Clouds"]
+
+[node name="CloudSpawnerTop" parent="Clouds/CloudSpawners" instance=ExtResource("3_8u6c6")]
+position = Vector2(1248, 70)
+
+[node name="CloudSpawnerBottom" parent="Clouds/CloudSpawners" instance=ExtResource("3_8u6c6")]
+position = Vector2(1920, 233)
+
+[node name="Cloud1" parent="Clouds" instance=ExtResource("6_t03o3")]
+position = Vector2(752, 67)
+
+[node name="Cloud2" parent="Clouds" instance=ExtResource("7_yb1an")]
+position = Vector2(1367, 180)
+
+[node name="Cloud3" parent="Clouds" instance=ExtResource("8_47wft")]
+position = Vector2(384, 183)
