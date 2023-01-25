@@ -9,17 +9,16 @@ extends Node2D
 @onready var container = get_tree().get_root()
 
 func _ready():
-    pass
+    spawn()
 
-func _process(delta):
-    pass
-
-
-func _on_cooldown_timeout():
+func spawn():
     var rand_index : int = randi() % clouds.size()
 
     var cloud = clouds[rand_index].instantiate()
     cloud.global_position = global_position
-    container.add_child(cloud)
+    container.add_child.call_deferred(cloud)
 
     cooldown_timer.start()
+
+func _on_cooldown_timeout():
+    spawn()

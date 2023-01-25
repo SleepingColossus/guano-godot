@@ -61,7 +61,7 @@ position = Vector2(1920, 233)
 position = Vector2(752, 67)
 
 [node name="Cloud2" parent="Clouds" instance=ExtResource("7_yb1an")]
-position = Vector2(1367, 180)
+position = Vector2(1024, 190)
 
 [node name="Cloud3" parent="Clouds" instance=ExtResource("8_47wft")]
 position = Vector2(384, 183)

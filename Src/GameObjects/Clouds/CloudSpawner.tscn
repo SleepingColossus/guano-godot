@@ -11,6 +11,5 @@ clouds = [ExtResource("2_g7jeh"), ExtResource("3_7yxg7"), ExtResource("4_jeerl")
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 10.0
-autostart = true
 
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
