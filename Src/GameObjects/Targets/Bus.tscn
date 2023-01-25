@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4g3871mlu5h3"]
+[gd_scene load_steps=11 format=3 uid="uid://b4g3871mlu5h3"]
 
 [ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_747ml"]
 [ext_resource type="Texture2D" uid="uid://ca7oxq8hfbuwl" path="res://Sprites/Bus.png" id="2_icqoj"]
@@ -42,6 +42,65 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j38ho"]
 size = Vector2(148, 68)
 
+[sub_resource type="Animation" id="Animation_2nlfc"]
+resource_name = "death_animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"delete"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wc0di"]
+_data = {
+"death_animation": SubResource("Animation_2nlfc")
+}
+
 [node name="Bus" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 4
@@ -55,3 +114,8 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -5)
 shape = SubResource("RectangleShape2D_j38ho")
+
+[node name="DeathAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wc0di")
+}
