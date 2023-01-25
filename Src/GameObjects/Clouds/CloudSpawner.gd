@@ -16,7 +16,9 @@ func _process(delta):
 
 
 func _on_cooldown_timeout():
-    var cloud = clouds[0].instantiate()
+    var rand_index : int = randi() % clouds.size()
+
+    var cloud = clouds[rand_index].instantiate()
     cloud.global_position = global_position
     container.add_child(cloud)
 
