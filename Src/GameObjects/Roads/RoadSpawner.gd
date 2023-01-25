@@ -8,12 +8,6 @@ extends Node2D
 # used in order to detach projectiles from player's coordinate system
 @onready var container = get_tree().get_root()
 
-func _ready():
-    pass
-
-func _process(delta):
-    pass
-
 
 func _on_cooldown_timeout():
     var r = road_scene.instantiate()

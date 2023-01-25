@@ -9,13 +9,8 @@ var ready_to_fire := true
 # used in order to detach projectiles from player's coordinate system
 @onready var container = get_tree().get_root()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-    pass # Replace with function body.
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
     if Input.is_anything_pressed() && ready_to_fire:
         ready_to_fire = false
 

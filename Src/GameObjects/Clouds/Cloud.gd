@@ -7,7 +7,7 @@ var destroy_offset := 500
 func _ready():
     velocity = Vector2(horizontal_velocity, 0)
 
-func _process(delta):
+func _process(_delta):
     move_and_slide()
 
     if position.x < -destroy_offset:
