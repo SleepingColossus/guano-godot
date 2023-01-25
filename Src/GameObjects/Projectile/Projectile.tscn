@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1q81epf3wlrx"]
+[gd_scene load_steps=4 format=3 uid="uid://b1q81epf3wlrx"]
 
 [ext_resource type="Texture2D" uid="uid://bfgbxgiw2icrm" path="res://Sprites/Projectile.png" id="1_6xedc"]
+[ext_resource type="Script" path="res://GameObjects/Projectile/Projectile.gd" id="1_s522s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0r3a0"]
 radius = 7.0
@@ -8,9 +9,16 @@ radius = 7.0
 [node name="Projectile" type="RigidBody2D"]
 collision_layer = 127
 collision_mask = 127
+script = ExtResource("1_s522s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_6xedc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 127
+collision_mask = 127
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_0r3a0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

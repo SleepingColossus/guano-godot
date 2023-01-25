@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var movement_speed : int
 
+@onready var collider : CollisionShape2D = $CollisionShape2D
+
 var destroy_offset := 200
 
 func _ready():
@@ -12,3 +14,7 @@ func _process(delta):
 
     if global_position.x < -destroy_offset:
         queue_free()
+
+func die():
+    collider.disabled = true
+    queue_free()
