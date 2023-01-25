@@ -44,6 +44,8 @@ radius = 11.0
 height = 44.0
 
 [node name="Pedestrian" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 32
 script = ExtResource("1_nvgpt")
 movement_speed = -50
 

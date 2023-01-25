@@ -43,6 +43,8 @@ animations = [{
 size = Vector2(55, 31)
 
 [node name="Bread" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_g15td")
 movement_speed = -70
 

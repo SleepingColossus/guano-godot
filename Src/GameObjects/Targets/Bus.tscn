@@ -43,6 +43,8 @@ animations = [{
 size = Vector2(148, 68)
 
 [node name="Bus" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_747ml")
 movement_speed = -100
 
