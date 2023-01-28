@@ -1,9 +1,14 @@
+class_name Bird
+
 extends AnimatedSprite2D
+
+@export var projectile : PackedScene
+@export var ammo := 8
 
 @onready var cooldown_timer := $Cooldown
 var ready_to_fire := true
 
-@export var projectile : PackedScene
+var score := 0
 
 # containers for projectile instances
 # used in order to detach projectiles from player's coordinate system

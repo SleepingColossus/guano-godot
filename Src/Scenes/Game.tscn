@@ -20,6 +20,7 @@
 [node name="Game" type="Node2D"]
 
 [node name="Bird" parent="." instance=ExtResource("1_k5qe3")]
+unique_name_in_owner = true
 position = Vector2(143, 123)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

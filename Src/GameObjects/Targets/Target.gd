@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var movement_speed : int
+@export var score_awarded : int
+@export var ammo_awarded : int
 
 @onready var collider : CollisionShape2D = $CollisionShape2D
 @onready var animation : AnimationPlayer = $DeathAnimation

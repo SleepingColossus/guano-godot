@@ -1,7 +1,16 @@
 extends RigidBody2D
 
+var bird : Bird
+
+func _ready():
+    bird = get_node("/root/Game/Bird")
+
 # NOTE: Using Area2D for collision instead of RigidBody2D because of this bug:
 # https://github.com/godotengine/godot/issues/70671
-func _on_area_2d_body_entered(body):
-    body.die()
+func _on_area_2d_body_entered(target):
+    target.die()
+
+    bird.score += target.score_awarded
+    bird.ammo += target.ammo_awarded
+
     queue_free()
