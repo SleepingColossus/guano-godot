@@ -1,3 +1,5 @@
+class_name Target
+
 extends CharacterBody2D
 
 @export var movement_speed : int

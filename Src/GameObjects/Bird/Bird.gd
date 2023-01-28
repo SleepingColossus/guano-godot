@@ -2,6 +2,9 @@ class_name Bird
 
 extends AnimatedSprite2D
 
+signal shot_fired(ammo_remaining: int)
+signal rewards_collected(score: int, ammo: int)
+
 @export var projectile : PackedScene
 @export var ammo := 8
 
@@ -16,7 +19,8 @@ var score := 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-    if Input.is_anything_pressed() && ready_to_fire:
+    if Input.is_anything_pressed() && ready_to_fire && ammo > 0:
+        ammo -= 1
         ready_to_fire = false
 
         var p = projectile.instantiate()
@@ -24,7 +28,13 @@ func _process(_delta):
         container.add_child(p)
 
         cooldown_timer.start()
+        shot_fired.emit(ammo)
 
+func target_hit(target: Target):
+    score += target.score_awarded
+    ammo += target.ammo_awarded
+
+    rewards_collected.emit(score, ammo)
 
 func _on_cooldown_timeout():
     ready_to_fire = true

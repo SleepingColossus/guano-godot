@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://i65y4ddutirh"]
+[gd_scene load_steps=19 format=3 uid="uid://i65y4ddutirh"]
 
+[ext_resource type="Script" path="res://Scenes/UIHandler.gd" id="1_f0vbu"]
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
 [ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="2_71881"]
 [ext_resource type="PackedScene" uid="uid://dcvl7p84hhypb" path="res://GameObjects/Clouds/CloudSpawner.tscn" id="3_8u6c6"]
@@ -19,6 +20,7 @@
 [ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="17_tl02d"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_f0vbu")
 
 [node name="Bird" parent="." instance=ExtResource("1_k5qe3")]
 unique_name_in_owner = true
@@ -102,3 +104,6 @@ theme_override_fonts/font = ExtResource("17_tl02d")
 text = "Ammo: 8"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="rewards_collected" from="Bird" to="." method="_on_bird_rewards_collected"]
+[connection signal="shot_fired" from="Bird" to="." method="_on_bird_shot_fired"]

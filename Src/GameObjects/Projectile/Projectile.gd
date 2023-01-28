@@ -7,10 +7,8 @@ func _ready():
 
 # NOTE: Using Area2D for collision instead of RigidBody2D because of this bug:
 # https://github.com/godotengine/godot/issues/70671
-func _on_area_2d_body_entered(target):
+func _on_area_2d_body_entered(target: Target):
     target.die()
-
-    bird.score += target.score_awarded
-    bird.ammo += target.ammo_awarded
+    bird.target_hit(target)
 
     queue_free()
