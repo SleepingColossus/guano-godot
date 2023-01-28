@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://i65y4ddutirh"]
+[gd_scene load_steps=18 format=3 uid="uid://i65y4ddutirh"]
 
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
 [ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="2_71881"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bgmlh00ibo5su" path="res://GameObjects/Targets/Bread.tscn" id="14_072vv"]
 [ext_resource type="PackedScene" uid="uid://b4g3871mlu5h3" path="res://GameObjects/Targets/Bus.tscn" id="15_ei8lp"]
 [ext_resource type="PackedScene" uid="uid://dg2of8shkrpao" path="res://GameObjects/Targets/Car.tscn" id="16_yhugq"]
+[ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="17_tl02d"]
 
 [node name="Game" type="Node2D"]
 
@@ -84,3 +85,20 @@ targets = [ExtResource("14_072vv"), ExtResource("15_ei8lp"), ExtResource("16_yhu
 [node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(1437, 415)
 targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("12_c81xk"), ExtResource("13_ngjuq")]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 6.0
+offset_right = 134.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("17_tl02d")
+text = "Score: 0"
+vertical_alignment = 1
+
+[node name="AmmoLabel" type="Label" parent="."]
+offset_left = 207.0
+offset_right = 319.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("17_tl02d")
+text = "Ammo: 8"
+horizontal_alignment = 1
+vertical_alignment = 1
