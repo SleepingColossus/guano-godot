@@ -93,7 +93,7 @@ offset_left = 6.0
 offset_right = 134.0
 offset_bottom = 26.0
 theme_override_fonts/font = ExtResource("17_tl02d")
-text = "Score: 0"
+text = "Score: ?"
 vertical_alignment = 1
 
 [node name="AmmoLabel" type="Label" parent="."]
@@ -101,7 +101,25 @@ offset_left = 207.0
 offset_right = 319.0
 offset_bottom = 26.0
 theme_override_fonts/font = ExtResource("17_tl02d")
-text = "Ammo: 8"
+text = "Ammo: ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StreakLabel" type="Label" parent="."]
+offset_left = 391.0
+offset_right = 535.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("17_tl02d")
+text = "Streak: ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MultiplierLabel" type="Label" parent="."]
+offset_left = 600.0
+offset_right = 824.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("17_tl02d")
+text = "Multiplier: x?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
