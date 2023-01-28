@@ -14,7 +14,7 @@ var ready_to_fire := true
 
 var score := 0
 var score_multiplier := 1
-var streak := 0
+var current_streak := 0
 
 # containers for projectile instances
 # used in order to detach projectiles from player's coordinate system
@@ -39,19 +39,19 @@ func _process(_delta):
         shot_fired.emit(ammo)
 
 func target_hit(target: Target):
-    streak += 1
-    score_multiplier = adjust_multiplier(streak)
+    current_streak += 1
+    score_multiplier = adjust_multiplier(current_streak)
 
     score += target.score_awarded * score_multiplier
     ammo += target.ammo_awarded
 
-    rewards_collected.emit(score, ammo, streak, score_multiplier)
+    rewards_collected.emit(score, ammo, current_streak, score_multiplier)
 
 func target_missed():
-    streak = 0
-    score_multiplier = adjust_multiplier(streak)
+    current_streak = 0
+    score_multiplier = adjust_multiplier(current_streak)
 
-    streak_broken.emit(streak, score_multiplier)
+    streak_broken.emit(current_streak, score_multiplier)
 
 func adjust_multiplier(streak: int) -> int:
     var x = (streak / 10) + 1
