@@ -47,5 +47,6 @@ script = ExtResource("2_y8gj8")
 projectile = ExtResource("3_cowpu")
 
 [node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.2
 
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
