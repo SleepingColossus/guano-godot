@@ -125,3 +125,4 @@ vertical_alignment = 1
 
 [connection signal="rewards_collected" from="Bird" to="." method="_on_bird_rewards_collected"]
 [connection signal="shot_fired" from="Bird" to="." method="_on_bird_shot_fired"]
+[connection signal="streak_broken" from="Bird" to="." method="_on_bird_streak_broken"]

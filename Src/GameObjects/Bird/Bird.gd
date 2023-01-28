@@ -33,6 +33,7 @@ func _process(_delta):
         var p = projectile.instantiate()
         p.global_position = global_position
         container.add_child(p)
+        p.missed.connect(target_missed)
 
         cooldown_timer.start()
         shot_fired.emit(ammo)
@@ -49,6 +50,8 @@ func target_hit(target: Target):
 func target_missed():
     streak = 0
     score_multiplier = adjust_multiplier(streak)
+
+    streak_broken.emit(streak, score_multiplier)
 
 func adjust_multiplier(streak: int) -> int:
     var x = (streak / 10) + 1

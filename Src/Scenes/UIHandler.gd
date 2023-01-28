@@ -19,3 +19,7 @@ func _on_bird_rewards_collected(score, ammo, streak, multiplier):
 
 func _on_bird_shot_fired(ammo_remaining):
     ammo_label.text = "Ammo: %d" % ammo_remaining
+
+func _on_bird_streak_broken(streak, multiplier):
+    streak_label.text = "Streak: %d" % streak
+    multiplier_label.text = "Multiplier: x%d" % multiplier
