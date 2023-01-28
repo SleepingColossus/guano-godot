@@ -106,6 +106,7 @@ collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_ach6w")
 movement_speed = -100
+score_awarded = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

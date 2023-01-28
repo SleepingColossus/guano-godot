@@ -106,6 +106,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_g15td")
 movement_speed = -70
+ammo_awarded = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

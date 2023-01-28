@@ -107,6 +107,7 @@ collision_layer = 32
 collision_mask = 32
 script = ExtResource("1_nvgpt")
 movement_speed = -50
+score_awarded = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")
