@@ -4,6 +4,8 @@
 
 [node name="TargetSpawner" type="Node2D"]
 script = ExtResource("1_pfnm0")
+cooldown_min = 5
+cooldown_max = 10
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 10.0
