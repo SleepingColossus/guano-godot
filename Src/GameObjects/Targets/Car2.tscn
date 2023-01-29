@@ -102,8 +102,8 @@ _data = {
 }
 
 [node name="Car2" type="CharacterBody2D"]
-collision_layer = 8
-collision_mask = 8
+collision_layer = 32
+collision_mask = 32
 script = ExtResource("1_wsrsv")
 movement_speed = -100
 score_awarded = 1

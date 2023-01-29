@@ -102,8 +102,8 @@ _data = {
 }
 
 [node name="OldLady" type="CharacterBody2D"]
-collision_layer = 16
-collision_mask = 16
+collision_layer = 256
+collision_mask = 256
 script = ExtResource("1_a3udl")
 movement_speed = -40
 score_awarded = 1

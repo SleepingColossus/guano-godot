@@ -130,8 +130,8 @@ _data = {
 }
 
 [node name="Bread" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_g15td")
 movement_speed = -70
 ammo_awarded = 3

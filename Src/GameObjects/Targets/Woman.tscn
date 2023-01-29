@@ -130,8 +130,8 @@ _data = {
 }
 
 [node name="Woman" type="CharacterBody2D"]
-collision_layer = 32
-collision_mask = 32
+collision_layer = 2048
+collision_mask = 2048
 script = ExtResource("1_f2epv")
 movement_speed = -50
 score_awarded = 1

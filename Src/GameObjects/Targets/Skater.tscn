@@ -158,8 +158,8 @@ _data = {
 }
 
 [node name="Skater" type="CharacterBody2D"]
-collision_layer = 64
-collision_mask = 64
+collision_layer = 512
+collision_mask = 512
 script = ExtResource("1_k6cv7")
 movement_speed = -80
 score_awarded = 1
