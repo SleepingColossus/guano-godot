@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://GameObjects/Roads/Road.gd" id="1_t7gda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbvf4"]
-size = Vector2(300, 223)
+size = Vector2(1203, 580.5)
 
 [node name="Road" type="CharacterBody2D"]
 z_index = -1
@@ -18,5 +18,5 @@ horizontal_velocity = -20
 texture = ExtResource("1_4qa5h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 49.5)
+position = Vector2(-0.5, 304.75)
 shape = SubResource("RectangleShape2D_xbvf4")
