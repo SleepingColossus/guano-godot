@@ -6,10 +6,16 @@ extends Node
 @onready var multiplier_label := $MultiplierLabel
 
 func _ready():
-    pass # Replace with function body.
+    init_ui()
 
 func _process(_delta):
     pass
+
+func init_ui():
+    score_label.text = "Score: 0"
+    ammo_label.text = "Ammo: 8"
+    streak_label.text = "Streak: 0"
+    multiplier_label.text = "Multiplier: x1"
 
 func _on_bird_rewards_collected(score, ammo, streak, multiplier):
     score_label.text = "Score: %d" % score
