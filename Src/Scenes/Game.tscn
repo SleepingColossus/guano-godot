@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dihaox43xmti6"]
+[gd_scene load_steps=24 format=3 uid="uid://dihaox43xmti6"]
 
 [ext_resource type="Script" path="res://Scenes/UIHandler.gd" id="1_f0vbu"]
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="1_k5qe3"]
@@ -16,8 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://dxo64ti5br6gt" path="res://GameObjects/Targets/Skater.tscn" id="13_ngjuq"]
 [ext_resource type="PackedScene" uid="uid://bgmlh00ibo5su" path="res://GameObjects/Targets/Bread.tscn" id="14_072vv"]
 [ext_resource type="PackedScene" uid="uid://b4g3871mlu5h3" path="res://GameObjects/Targets/Bus.tscn" id="15_ei8lp"]
+[ext_resource type="PackedScene" uid="uid://btupy7dgeaa3p" path="res://GameObjects/Targets/Woman.tscn" id="15_jywwo"]
 [ext_resource type="PackedScene" uid="uid://dg2of8shkrpao" path="res://GameObjects/Targets/Car1.tscn" id="17_swbrj"]
 [ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="17_tl02d"]
+[ext_resource type="PackedScene" uid="uid://dmtsthotxx3o8" path="res://GameObjects/Targets/Car2.tscn" id="18_7ehmm"]
+[ext_resource type="PackedScene" uid="uid://nyvfjh2ulqon" path="res://GameObjects/Targets/Car3.tscn" id="19_ug24r"]
+[ext_resource type="PackedScene" uid="uid://b1sakvb7d0ojp" path="res://GameObjects/Targets/Van.tscn" id="20_qxhv0"]
+[ext_resource type="PackedScene" uid="uid://dk2fhwtiyx2vf" path="res://GameObjects/Targets/BadBird.tscn" id="22_hqud8"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_f0vbu")
@@ -72,21 +77,31 @@ position = Vector2(1680, 109)
 
 [node name="Targets" type="Node2D" parent="."]
 
+[node name="TargetSpawnerSky" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(2638, 280)
+cooldown_min = 10
+cooldown_max = 20
+targets = [ExtResource("22_hqud8")]
+
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1189, 599)
-targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("13_kb6tx"), ExtResource("13_ngjuq")]
+position = Vector2(2344, 586)
+targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo")]
+
+[node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("9_6xgsp")]
+position = Vector2(2604, 662)
+targets = [ExtResource("10_g40k6")]
 
 [node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1298, 478)
-targets = [ExtResource("14_072vv"), ExtResource("15_ei8lp"), ExtResource("17_swbrj")]
+position = Vector2(2008, 737)
+targets = [ExtResource("15_ei8lp"), ExtResource("17_swbrj"), ExtResource("18_7ehmm"), ExtResource("19_ug24r"), ExtResource("20_qxhv0")]
 
 [node name="TargetSpawnerRoadBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1474, 536)
-targets = [ExtResource("14_072vv"), ExtResource("15_ei8lp"), ExtResource("17_swbrj")]
+position = Vector2(2321, 880)
+targets = [ExtResource("15_ei8lp"), ExtResource("17_swbrj"), ExtResource("18_7ehmm"), ExtResource("19_ug24r"), ExtResource("20_qxhv0")]
 
 [node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(1437, 415)
-targets = [ExtResource("10_g40k6"), ExtResource("11_rj0as"), ExtResource("13_kb6tx"), ExtResource("13_ngjuq")]
+position = Vector2(1944, 1013)
+targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo")]
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 6.0
