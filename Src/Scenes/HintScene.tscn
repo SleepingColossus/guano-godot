@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://pi1arbakkolq"]
+[gd_scene load_steps=15 format=3 uid="uid://b0rc21q1eri1g"]
 
 [ext_resource type="PackedScene" uid="uid://bwc0rhanwpqq3" path="res://GameObjects/TargetDescriptor/TargetDescriptor.tscn" id="1_2xef6"]
 [ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="1_d4e5d"]
