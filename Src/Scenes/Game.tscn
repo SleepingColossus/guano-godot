@@ -47,10 +47,10 @@ position = Vector2(1802, 475)
 [node name="CloudSpawners" type="Node2D" parent="Clouds"]
 
 [node name="CloudSpawnerTop" parent="Clouds/CloudSpawners" instance=ExtResource("3_8u6c6")]
-position = Vector2(1248, 70)
+position = Vector2(2056, 70)
 
 [node name="CloudSpawnerBottom" parent="Clouds/CloudSpawners" instance=ExtResource("3_8u6c6")]
-position = Vector2(1920, 233)
+position = Vector2(2210, 233)
 
 [node name="Cloud1" parent="Clouds" instance=ExtResource("6_t03o3")]
 position = Vector2(752, 67)
@@ -60,6 +60,15 @@ position = Vector2(1024, 190)
 
 [node name="Cloud3" parent="Clouds" instance=ExtResource("8_47wft")]
 position = Vector2(384, 183)
+
+[node name="Cloud4" parent="Clouds" instance=ExtResource("8_47wft")]
+position = Vector2(1330, 104)
+
+[node name="Cloud5" parent="Clouds" instance=ExtResource("7_yb1an")]
+position = Vector2(1809, 289)
+
+[node name="Cloud6" parent="Clouds" instance=ExtResource("6_t03o3")]
+position = Vector2(1680, 109)
 
 [node name="Targets" type="Node2D" parent="."]
 

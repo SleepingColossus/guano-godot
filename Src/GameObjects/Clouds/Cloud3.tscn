@@ -6,13 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1i80"]
 size = Vector2(112, 60)
 
-[node name="Cloud1" type="CharacterBody2D"]
+[node name="Cloud3" type="CharacterBody2D"]
 z_index = -1
 z_as_relative = false
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_nrk2m")
-horizontal_velocity = -100
+horizontal_velocity = -90
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_hqkpj")
