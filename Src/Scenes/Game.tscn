@@ -34,22 +34,13 @@ autoplay = true
 position = Vector2(0, 4)
 
 [node name="RoadSpawner" parent="Roads" instance=ExtResource("4_4w3sh")]
-position = Vector2(1300, 469)
+position = Vector2(3000, 475)
 
 [node name="Road" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(150, 469)
+position = Vector2(602, 475)
 
 [node name="Road2" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(450, 469)
-
-[node name="Road3" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(750, 469)
-
-[node name="Road4" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(1050, 469)
-
-[node name="Road5" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(1350, 469)
+position = Vector2(1802, 475)
 
 [node name="Clouds" type="Node2D" parent="."]
 

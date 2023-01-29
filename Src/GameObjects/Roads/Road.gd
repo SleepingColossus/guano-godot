@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var horizontal_velocity : int
 
-var sprite_width := 300
+var sprite_width := 1200
 
 func _ready():
     velocity = Vector2(horizontal_velocity, 0)
