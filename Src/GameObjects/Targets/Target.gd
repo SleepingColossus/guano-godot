@@ -2,6 +2,10 @@ class_name Target
 
 extends CharacterBody2D
 
+# used on hint screen
+@export var target_name : String
+@export var description : String
+
 @export var movement_speed : int
 @export var score_awarded : int
 @export var ammo_awarded : int
