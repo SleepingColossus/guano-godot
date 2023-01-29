@@ -105,8 +105,10 @@ _data = {
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_747ml")
+target_name = "Bus"
+description = "This bus will not stop at the next station"
 movement_speed = -100
-score_awarded = 1
+score_awarded = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

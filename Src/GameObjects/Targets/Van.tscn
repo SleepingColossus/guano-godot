@@ -105,8 +105,10 @@ _data = {
 collision_layer = 1024
 collision_mask = 1024
 script = ExtResource("1_dmoei")
+target_name = "Post Van"
+description = "Deliver your \"parcel\" to the van directily"
 movement_speed = -100
-score_awarded = 1
+score_awarded = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

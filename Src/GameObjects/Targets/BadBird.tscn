@@ -89,6 +89,8 @@ _data = {
 
 [node name="BadBird" type="CharacterBody2D"]
 script = ExtResource("1_y4o0q")
+target_name = "Small Bird"
+description = "You'll probably hit it by accident"
 movement_speed = -100
 score_awarded = 1
 

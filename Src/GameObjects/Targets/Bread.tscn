@@ -133,6 +133,8 @@ _data = {
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_g15td")
+target_name = "Toast"
+description = "Awards you will more ammuntion rather than score"
 movement_speed = -70
 ammo_awarded = 3
 

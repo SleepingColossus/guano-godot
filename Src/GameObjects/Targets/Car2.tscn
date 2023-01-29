@@ -105,8 +105,10 @@ _data = {
 collision_layer = 32
 collision_mask = 32
 script = ExtResource("1_wsrsv")
+target_name = "Car 2"
+description = "At least the driver won't get soiled"
 movement_speed = -100
-score_awarded = 1
+score_awarded = 10
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

@@ -106,6 +106,8 @@ _data = {
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_s8kms")
+target_name = "Cyclist"
+description = "His fast speed and cap will not protect him from your bowel movement"
 movement_speed = -100
 score_awarded = 1
 

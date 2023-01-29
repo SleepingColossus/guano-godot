@@ -105,6 +105,8 @@ _data = {
 collision_layer = 256
 collision_mask = 256
 script = ExtResource("1_a3udl")
+target_name = "Old Lady"
+description = "She might bake you a pie if you avoid pooping on her"
 movement_speed = -40
 score_awarded = 1
 
