@@ -3,36 +3,36 @@
 [ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_a3udl"]
 [ext_resource type="Texture2D" uid="uid://dxlfq1pccpyds" path="res://Sprites/OldLady.png" id="2_fekmw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m0t47"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmt1j"]
 atlas = ExtResource("2_fekmw")
-region = Rect2(0, 0, 55, 50)
+region = Rect2(0, 0, 23, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hem87"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ettx"]
 atlas = ExtResource("2_fekmw")
-region = Rect2(55, 0, 55, 50)
+region = Rect2(23, 0, 23, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_efwyu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgyep"]
 atlas = ExtResource("2_fekmw")
-region = Rect2(110, 0, 55, 50)
+region = Rect2(46, 0, 23, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gpbh0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8fhs"]
 atlas = ExtResource("2_fekmw")
-region = Rect2(165, 0, 55, 50)
+region = Rect2(69, 0, 23, 46)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m0t47")
+"texture": SubResource("AtlasTexture_hmt1j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hem87")
+"texture": SubResource("AtlasTexture_1ettx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_efwyu")
+"texture": SubResource("AtlasTexture_vgyep")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gpbh0")
+"texture": SubResource("AtlasTexture_l8fhs")
 }],
 "loop": true,
 "name": &"default",
@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hst3c"]
-size = Vector2(37, 42)
+size = Vector2(20, 41)
 
 [sub_resource type="Animation" id="Animation_2nlfc"]
 resource_name = "death_animation"
@@ -113,7 +113,7 @@ frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_hst3c")
 
 [node name="DeathAnimation" type="AnimationPlayer" parent="."]

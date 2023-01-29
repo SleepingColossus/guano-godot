@@ -1,47 +1,46 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1t5cb853qjhv"]
+[gd_scene load_steps=11 format=3 uid="uid://dg2of8shkrpao"]
 
-[ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_s8kms"]
-[ext_resource type="Texture2D" uid="uid://dugmx0q7jamqm" path="res://Sprites/Bicycle.png" id="2_hiluh"]
+[ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_ach6w"]
+[ext_resource type="Texture2D" uid="uid://dnuvj443de6u7" path="res://Sprites/Car1.png" id="2_7caf4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r74sj"]
-atlas = ExtResource("2_hiluh")
-region = Rect2(0, 0, 54, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yful7"]
+atlas = ExtResource("2_7caf4")
+region = Rect2(0, 0, 100, 88)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tk1d1"]
-atlas = ExtResource("2_hiluh")
-region = Rect2(54, 0, 54, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2riv"]
+atlas = ExtResource("2_7caf4")
+region = Rect2(100, 0, 100, 88)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ltswi"]
-atlas = ExtResource("2_hiluh")
-region = Rect2(108, 0, 54, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_adjip"]
+atlas = ExtResource("2_7caf4")
+region = Rect2(200, 0, 100, 88)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ywp5f"]
-atlas = ExtResource("2_hiluh")
-region = Rect2(162, 0, 54, 55)
+[sub_resource type="AtlasTexture" id="AtlasTexture_do0rd"]
+atlas = ExtResource("2_7caf4")
+region = Rect2(300, 0, 100, 88)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r74sj")
+"texture": SubResource("AtlasTexture_yful7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tk1d1")
+"texture": SubResource("AtlasTexture_y2riv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ltswi")
+"texture": SubResource("AtlasTexture_adjip")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ywp5f")
+"texture": SubResource("AtlasTexture_do0rd")
 }],
 "loop": true,
 "name": &"default",
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_akpqy"]
-radius = 26.0
-height = 52.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgmli"]
+size = Vector2(100, 63)
 
 [sub_resource type="Animation" id="Animation_2nlfc"]
 resource_name = "death_animation"
@@ -102,8 +101,10 @@ _data = {
 "death_animation": SubResource("Animation_2nlfc")
 }
 
-[node name="Bicycle" type="CharacterBody2D"]
-script = ExtResource("1_s8kms")
+[node name="Car1" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_ach6w")
 movement_speed = -100
 score_awarded = 1
 
@@ -112,8 +113,8 @@ frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_akpqy")
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_dgmli")
 
 [node name="DeathAnimation" type="AnimationPlayer" parent="."]
 libraries = {

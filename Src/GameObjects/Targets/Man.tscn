@@ -1,47 +1,74 @@
-[gd_scene load_steps=11 format=3 uid="uid://sgpx8e600jyo"]
+[gd_scene load_steps=15 format=3 uid="uid://sgpx8e600jyo"]
 
-[ext_resource type="Texture2D" uid="uid://b1uneo3ev1lrd" path="res://Sprites/Pedestrian.png" id="1_20hqa"]
 [ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_nvgpt"]
+[ext_resource type="Texture2D" uid="uid://bc1yfywt37a5y" path="res://Sprites/Man1.png" id="2_wdtjl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hpmnk"]
-atlas = ExtResource("1_20hqa")
-region = Rect2(0, 0, 25, 45)
+[sub_resource type="AtlasTexture" id="AtlasTexture_uueqm"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(0, 0, 31, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ahqsc"]
-atlas = ExtResource("1_20hqa")
-region = Rect2(25, 0, 25, 45)
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5qye"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(31, 0, 31, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j8kcx"]
-atlas = ExtResource("1_20hqa")
-region = Rect2(50, 0, 25, 45)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4xmx"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(62, 0, 31, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wajoi"]
-atlas = ExtResource("1_20hqa")
-region = Rect2(75, 0, 25, 45)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bpyb"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(93, 0, 31, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2x2t"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(124, 0, 31, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cin1"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(155, 0, 31, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfg1x"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(186, 0, 31, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a3c8"]
+atlas = ExtResource("2_wdtjl")
+region = Rect2(217, 0, 31, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hpmnk")
+"texture": SubResource("AtlasTexture_uueqm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ahqsc")
+"texture": SubResource("AtlasTexture_x5qye")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j8kcx")
+"texture": SubResource("AtlasTexture_a4xmx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wajoi")
+"texture": SubResource("AtlasTexture_2bpyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2x2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cin1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfg1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a3c8")
 }],
 "loop": true,
 "name": &"default",
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cd8xg"]
-radius = 11.0
-height = 44.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fr13j"]
+size = Vector2(16, 43.5)
 
 [sub_resource type="Animation" id="Animation_2nlfc"]
 resource_name = "death_animation"
@@ -102,7 +129,7 @@ _data = {
 "death_animation": SubResource("Animation_2nlfc")
 }
 
-[node name="Pedestrian" type="CharacterBody2D"]
+[node name="Man" type="CharacterBody2D"]
 collision_layer = 32
 collision_mask = 32
 script = ExtResource("1_nvgpt")
@@ -114,7 +141,8 @@ frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_cd8xg")
+position = Vector2(1, -3.75)
+shape = SubResource("RectangleShape2D_fr13j")
 
 [node name="DeathAnimation" type="AnimationPlayer" parent="."]
 libraries = {

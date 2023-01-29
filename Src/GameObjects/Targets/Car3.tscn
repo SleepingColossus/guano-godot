@@ -1,38 +1,38 @@
-[gd_scene load_steps=11 format=3 uid="uid://dg2of8shkrpao"]
+[gd_scene load_steps=11 format=3 uid="uid://nyvfjh2ulqon"]
 
-[ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_ach6w"]
-[ext_resource type="Texture2D" uid="uid://b3fbe76u57umj" path="res://Sprites/Car.png" id="2_mb0m4"]
+[ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_nb6oi"]
+[ext_resource type="Texture2D" uid="uid://peaikq7te1t2" path="res://Sprites/Car3.png" id="2_ur2hb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_el20b"]
-atlas = ExtResource("2_mb0m4")
-region = Rect2(0, 0, 85, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngj0t"]
+atlas = ExtResource("2_ur2hb")
+region = Rect2(0, 0, 106, 78)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4p56k"]
-atlas = ExtResource("2_mb0m4")
-region = Rect2(85, 0, 85, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_o82vg"]
+atlas = ExtResource("2_ur2hb")
+region = Rect2(106, 0, 106, 78)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u6snk"]
-atlas = ExtResource("2_mb0m4")
-region = Rect2(170, 0, 85, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai3eh"]
+atlas = ExtResource("2_ur2hb")
+region = Rect2(212, 0, 106, 78)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m7j1f"]
-atlas = ExtResource("2_mb0m4")
-region = Rect2(255, 0, 85, 65)
+[sub_resource type="AtlasTexture" id="AtlasTexture_iggm0"]
+atlas = ExtResource("2_ur2hb")
+region = Rect2(318, 0, 106, 78)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_el20b")
+"texture": SubResource("AtlasTexture_ngj0t")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4p56k")
+"texture": SubResource("AtlasTexture_o82vg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u6snk")
+"texture": SubResource("AtlasTexture_ai3eh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m7j1f")
+"texture": SubResource("AtlasTexture_iggm0")
 }],
 "loop": true,
 "name": &"default",
@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgmli"]
-size = Vector2(78, 63)
+size = Vector2(104, 63)
 
 [sub_resource type="Animation" id="Animation_2nlfc"]
 resource_name = "death_animation"
@@ -101,10 +101,10 @@ _data = {
 "death_animation": SubResource("Animation_2nlfc")
 }
 
-[node name="Car" type="CharacterBody2D"]
+[node name="Car3" type="CharacterBody2D"]
 collision_layer = 8
 collision_mask = 8
-script = ExtResource("1_ach6w")
+script = ExtResource("1_nb6oi")
 movement_speed = -100
 score_awarded = 1
 
@@ -113,7 +113,7 @@ frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -0.5)
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_dgmli")
 
 [node name="DeathAnimation" type="AnimationPlayer" parent="."]

@@ -3,36 +3,36 @@
 [ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_747ml"]
 [ext_resource type="Texture2D" uid="uid://ca7oxq8hfbuwl" path="res://Sprites/Bus.png" id="2_icqoj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ee8tt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sehgr"]
 atlas = ExtResource("2_icqoj")
-region = Rect2(0, 0, 150, 80)
+region = Rect2(0, 0, 194, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8whc3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_73pmk"]
 atlas = ExtResource("2_icqoj")
-region = Rect2(150, 0, 150, 80)
+region = Rect2(194, 0, 194, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2dcw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2adob"]
 atlas = ExtResource("2_icqoj")
-region = Rect2(300, 0, 150, 80)
+region = Rect2(388, 0, 194, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0nwru"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbp06"]
 atlas = ExtResource("2_icqoj")
-region = Rect2(450, 0, 150, 80)
+region = Rect2(582, 0, 194, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ee8tt")
+"texture": SubResource("AtlasTexture_sehgr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8whc3")
+"texture": SubResource("AtlasTexture_73pmk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h2dcw")
+"texture": SubResource("AtlasTexture_2adob")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0nwru")
+"texture": SubResource("AtlasTexture_rbp06")
 }],
 "loop": true,
 "name": &"default",
@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j38ho"]
-size = Vector2(148, 68)
+size = Vector2(194, 92)
 
 [sub_resource type="Animation" id="Animation_2nlfc"]
 resource_name = "death_animation"
@@ -113,7 +113,7 @@ frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -5)
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_j38ho")
 
 [node name="DeathAnimation" type="AnimationPlayer" parent="."]

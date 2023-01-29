@@ -4,36 +4,36 @@
 [ext_resource type="Script" path="res://GameObjects/Bird/Bird.gd" id="2_y8gj8"]
 [ext_resource type="PackedScene" uid="uid://b1q81epf3wlrx" path="res://GameObjects/Projectile/Projectile.tscn" id="3_cowpu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_654bx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge5rm"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(0, 0, 100, 100)
+region = Rect2(0, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bvfiu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhsos"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(100, 0, 100, 100)
+region = Rect2(50, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gclvu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uqi4"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(200, 0, 100, 100)
+region = Rect2(100, 0, 50, 50)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vctra"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy3n0"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(300, 0, 100, 100)
+region = Rect2(150, 0, 50, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7c6r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_654bx")
+"texture": SubResource("AtlasTexture_ge5rm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bvfiu")
+"texture": SubResource("AtlasTexture_hhsos")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gclvu")
+"texture": SubResource("AtlasTexture_7uqi4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vctra")
+"texture": SubResource("AtlasTexture_hy3n0")
 }],
 "loop": true,
 "name": &"default",
