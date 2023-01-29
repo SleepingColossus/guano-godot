@@ -27,58 +27,59 @@ theme_override_font_sizes/font_size = 72
 text = "TARGETS"
 
 [node name="ColumnLeft" type="Node2D" parent="."]
+position = Vector2(400, 0)
 
 [node name="TargetDescriptor" parent="ColumnLeft" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 250)
+position = Vector2(0, 250)
 target = ExtResource("2_dy0bd")
 
 [node name="TargetDescriptor2" parent="ColumnLeft" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 450)
+position = Vector2(0, 450)
 target = ExtResource("3_awa72")
 
 [node name="TargetDescriptor3" parent="ColumnLeft" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 650)
+position = Vector2(0, 650)
 target = ExtResource("4_fhyrt")
 awards_ammo = true
 
 [node name="TargetDescriptor4" parent="ColumnLeft" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 850)
+position = Vector2(0, 850)
 target = ExtResource("5_eg7m5")
 
 [node name="ColumnMiddle" type="Node2D" parent="."]
-position = Vector2(600, 0)
+position = Vector2(1000, 0)
 
 [node name="TargetDescriptor" parent="ColumnMiddle" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 250)
+position = Vector2(0, 250)
 target = ExtResource("6_e5cyj")
 
 [node name="TargetDescriptor2" parent="ColumnMiddle" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 450)
+position = Vector2(0, 450)
 target = ExtResource("7_mfut4")
 
 [node name="TargetDescriptor3" parent="ColumnMiddle" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 650)
+position = Vector2(0, 650)
 target = ExtResource("8_oyp5q")
 
 [node name="TargetDescriptor4" parent="ColumnMiddle" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 850)
+position = Vector2(0, 850)
 target = ExtResource("9_sjci3")
 
 [node name="ColumnRight" type="Node2D" parent="."]
-position = Vector2(1200, 0)
+position = Vector2(1600, 0)
 
 [node name="TargetDescriptor" parent="ColumnRight" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 250)
+position = Vector2(0, 250)
 target = ExtResource("10_w1x8d")
 
 [node name="TargetDescriptor2" parent="ColumnRight" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 450)
+position = Vector2(0, 450)
 target = ExtResource("11_8hpr6")
 
 [node name="TargetDescriptor3" parent="ColumnRight" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 650)
+position = Vector2(0, 650)
 target = ExtResource("12_hlkhl")
 
 [node name="TargetDescriptor4" parent="ColumnRight" instance=ExtResource("1_2xef6")]
-position = Vector2(100, 850)
+position = Vector2(0, 850)
 target = ExtResource("13_tvmh5")
