@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwc0rhanwpqq3"]
+
+[ext_resource type="Script" path="res://GameObjects/TargetDescriptor/TargetDescriptor.gd" id="1_xdcvq"]
+[ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="2_femdq"]
+
+[node name="TargetDescriptor" type="Node2D"]
+script = ExtResource("1_xdcvq")
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = -40.0
+offset_right = 264.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("2_femdq")
+text = "Name Goes Here"
+uppercase = true
+
+[node name="DescriptionLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 472.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_femdq")
+text = "Description goes here.
+It might be long.
+And span multiple lines ...
+Maybe even four lines???
+But you'd need a pretty wild imagination
+to get that far ...
+Meditate on that ...."
+autowrap_mode = 3
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = -8.0
+offset_right = 200.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("2_femdq")
+text = "Score: 100"
