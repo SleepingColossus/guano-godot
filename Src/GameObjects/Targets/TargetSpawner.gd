@@ -1,11 +1,14 @@
 extends Node2D
 
+class_name TargetSpawner
+
 @export var cooldown_min : int
 @export var cooldown_max : int
 @onready var cooldown_timer := $Cooldown
 
 @export var reverse : bool
 @export var mark_targets : bool
+@export var mark_single : bool
 
 @export var targets : Array[PackedScene]
 
@@ -25,6 +28,9 @@ func spawn():
     if mark_targets:
         target.is_marked = mark_targets
         target.ammo_awarded = 1
+
+    if mark_single:
+        mark_targets = false
 
     target.global_position = global_position
     container.add_child.call_deferred(target)
