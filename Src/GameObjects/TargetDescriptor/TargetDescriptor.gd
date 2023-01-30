@@ -2,6 +2,7 @@ extends Node2D
 
 @export var target : PackedScene
 
+@onready var preview := $Preview
 @onready var name_label := $NameLabel
 @onready var desc_label := $DescriptionLabel
 @onready var score_label := $ScoreLabel
@@ -14,6 +15,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
     var t : Target = target.instantiate()
+    t.position = preview.position
     add_child(t)
 
     # stop target from moving
