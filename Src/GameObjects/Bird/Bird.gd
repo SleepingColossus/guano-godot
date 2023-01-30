@@ -9,8 +9,10 @@ signal streak_broken(streak: int, multiplier: int)
 @export var projectile : PackedScene
 @export var ammo := 8
 
-@onready var cooldown_timer := $Cooldown
 var ready_to_fire := true
+@onready var cooldown_timer := $Cooldown
+@onready var death_timer := $DeathTimer
+var death_timer_duration : int
 
 var score := 0
 var score_multiplier := 1
@@ -23,7 +25,8 @@ var current_streak := 0
 func _ready():
     # initialize UI
     # rewards_collected.emit(score, ammo, streak, score_multiplier)
-    pass
+
+    death_timer_duration = death_timer.wait_time
 
 func _process(_delta):
     if Input.is_anything_pressed() && ready_to_fire && ammo > 0:
@@ -38,6 +41,9 @@ func _process(_delta):
         cooldown_timer.start()
         shot_fired.emit(ammo)
 
+        if ammo <= 0:
+            death_timer.start()
+
 func target_hit(target: Target):
     current_streak += 1
     score_multiplier = adjust_multiplier(current_streak)
@@ -46,6 +52,11 @@ func target_hit(target: Target):
     ammo += target.ammo_awarded
 
     rewards_collected.emit(score, ammo, current_streak, score_multiplier)
+
+    if target.ammo_awarded > 0:
+        # reset death timer
+        death_timer.stop()
+        death_timer.wait_time = death_timer_duration # not sure if necessary
 
 func target_missed():
     current_streak = 0
@@ -59,3 +70,7 @@ func adjust_multiplier(streak: int) -> int:
 
 func _on_cooldown_timeout():
     ready_to_fire = true
+
+
+func _on_death_timer_timeout():
+    print_debug("game over")

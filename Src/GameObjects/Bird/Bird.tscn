@@ -49,4 +49,8 @@ projectile = ExtResource("3_cowpu")
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 0.2
 
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
