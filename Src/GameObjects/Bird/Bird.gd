@@ -86,7 +86,7 @@ func target_missed():
     streak_broken.emit(current_streak, score_multiplier)
 
 func adjust_multiplier(streak: int) -> int:
-    var x = (streak / 10) + 1
+    var x = (streak / 5) + 1
     return max(x, 1)
 
 func _on_cooldown_timeout():
