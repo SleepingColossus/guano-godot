@@ -7,7 +7,11 @@ signal rewards_collected(score: int, ammo: int, streak: int, multiplier: int)
 signal streak_broken(streak: int, multiplier: int)
 
 @export var projectile : PackedScene
-@export var ammo := 8
+
+@export var hitman_mode := false
+@export var ammo_endless := 8
+@export var ammo_hitman := 3
+var ammo : int
 
 var ready_to_fire := true
 @onready var cooldown_timer := $Cooldown
@@ -28,7 +32,14 @@ func _ready():
 
     death_timer_duration = death_timer.wait_time
 
+    if hitman_mode:
+        ammo = ammo_hitman
+        modulate = Color(1, 0, 0)
+    else:
+        ammo = ammo_endless
+
 func _process(_delta):
+
     if Input.is_anything_pressed() && ready_to_fire && ammo > 0:
         ammo -= 1
         ready_to_fire = false
@@ -45,7 +56,17 @@ func _process(_delta):
             death_timer.start()
 
 func target_hit(target: Target):
-    current_streak += 1
+
+    # in hitman mode only bread should increase the streak
+    if hitman_mode:
+        if target.ammo_awarded > 0:
+            current_streak += 1
+        else:
+            current_streak = 0
+    # in endless mode any target can increase the streak
+    else:
+        current_streak += 1
+
     score_multiplier = adjust_multiplier(current_streak)
 
     score += target.score_awarded * score_multiplier

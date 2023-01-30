@@ -1,0 +1,150 @@
+[gd_scene load_steps=24 format=3 uid="uid://dqcl4exhqbf5b"]
+
+[ext_resource type="Script" path="res://Scenes/UIHandler.gd" id="1_rivyt"]
+[ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="2_eg83q"]
+[ext_resource type="AudioStream" uid="uid://bwf2evauio3vy" path="res://Music/GuanoBGM.ogg" id="3_x3cx7"]
+[ext_resource type="PackedScene" uid="uid://ba40nt4sg0qam" path="res://GameObjects/Roads/RoadSpawner.tscn" id="4_ri0x1"]
+[ext_resource type="PackedScene" uid="uid://jexburvvu6qg" path="res://GameObjects/Roads/Road.tscn" id="5_ey0db"]
+[ext_resource type="PackedScene" uid="uid://dcvl7p84hhypb" path="res://GameObjects/Clouds/CloudSpawner.tscn" id="6_vmtia"]
+[ext_resource type="PackedScene" uid="uid://dgdvvad001x8" path="res://GameObjects/Clouds/Cloud2.tscn" id="7_w800p"]
+[ext_resource type="PackedScene" uid="uid://ho8kr7jllvqv" path="res://GameObjects/Clouds/Cloud3.tscn" id="8_faesr"]
+[ext_resource type="PackedScene" uid="uid://b8x60ftyn8tub" path="res://GameObjects/Clouds/Cloud1.tscn" id="9_os0fj"]
+[ext_resource type="PackedScene" uid="uid://cpa2hvc8g0qew" path="res://GameObjects/Targets/TargetSpawner.tscn" id="10_abrae"]
+[ext_resource type="PackedScene" uid="uid://dk2fhwtiyx2vf" path="res://GameObjects/Targets/BadBird.tscn" id="11_sax61"]
+[ext_resource type="PackedScene" uid="uid://sgpx8e600jyo" path="res://GameObjects/Targets/Man.tscn" id="13_6g0pr"]
+[ext_resource type="PackedScene" uid="uid://dwcuvjrb08hmr" path="res://GameObjects/Targets/OldLady.tscn" id="14_l8grx"]
+[ext_resource type="PackedScene" uid="uid://dxo64ti5br6gt" path="res://GameObjects/Targets/Skater.tscn" id="15_orgwb"]
+[ext_resource type="PackedScene" uid="uid://bnpsllva0ris7" path="res://GameObjects/Targets/BreadHitman.tscn" id="16_0nn2d"]
+[ext_resource type="PackedScene" uid="uid://btupy7dgeaa3p" path="res://GameObjects/Targets/Woman.tscn" id="16_eta4h"]
+[ext_resource type="PackedScene" uid="uid://b1t5cb853qjhv" path="res://GameObjects/Targets/Bicycle.tscn" id="17_xl256"]
+[ext_resource type="PackedScene" uid="uid://b4g3871mlu5h3" path="res://GameObjects/Targets/Bus.tscn" id="18_jk0n1"]
+[ext_resource type="PackedScene" uid="uid://dg2of8shkrpao" path="res://GameObjects/Targets/Car1.tscn" id="19_y328p"]
+[ext_resource type="PackedScene" uid="uid://dmtsthotxx3o8" path="res://GameObjects/Targets/Car2.tscn" id="20_v6fuo"]
+[ext_resource type="PackedScene" uid="uid://nyvfjh2ulqon" path="res://GameObjects/Targets/Car3.tscn" id="21_8sop2"]
+[ext_resource type="PackedScene" uid="uid://b1sakvb7d0ojp" path="res://GameObjects/Targets/Van.tscn" id="22_tr4g0"]
+[ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="23_l3wfv"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_rivyt")
+
+[node name="Bird" parent="." instance=ExtResource("2_eg83q")]
+unique_name_in_owner = true
+position = Vector2(143, 123)
+hitman_mode = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_x3cx7")
+autoplay = true
+
+[node name="Roads" type="Node2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="RoadSpawner" parent="Roads" instance=ExtResource("4_ri0x1")]
+position = Vector2(3000, 475)
+
+[node name="Road" parent="Roads" instance=ExtResource("5_ey0db")]
+position = Vector2(602, 475)
+
+[node name="Road2" parent="Roads" instance=ExtResource("5_ey0db")]
+position = Vector2(1802, 475)
+
+[node name="Clouds" type="Node2D" parent="."]
+
+[node name="CloudSpawners" type="Node2D" parent="Clouds"]
+
+[node name="CloudSpawnerTop" parent="Clouds/CloudSpawners" instance=ExtResource("6_vmtia")]
+position = Vector2(2056, 70)
+
+[node name="CloudSpawnerBottom" parent="Clouds/CloudSpawners" instance=ExtResource("6_vmtia")]
+position = Vector2(2210, 233)
+
+[node name="Cloud1" parent="Clouds" instance=ExtResource("7_w800p")]
+position = Vector2(752, 67)
+
+[node name="Cloud2" parent="Clouds" instance=ExtResource("8_faesr")]
+position = Vector2(1024, 190)
+
+[node name="Cloud3" parent="Clouds" instance=ExtResource("9_os0fj")]
+position = Vector2(384, 183)
+
+[node name="Cloud4" parent="Clouds" instance=ExtResource("9_os0fj")]
+position = Vector2(1330, 104)
+
+[node name="Cloud5" parent="Clouds" instance=ExtResource("8_faesr")]
+position = Vector2(1809, 289)
+
+[node name="Cloud6" parent="Clouds" instance=ExtResource("7_w800p")]
+position = Vector2(1680, 109)
+
+[node name="Targets" type="Node2D" parent="."]
+
+[node name="TargetSpawnerSky" parent="Targets" instance=ExtResource("10_abrae")]
+position = Vector2(2638, 280)
+cooldown_min = 10
+cooldown_max = 20
+targets = [ExtResource("11_sax61")]
+
+[node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("10_abrae")]
+position = Vector2(2344, 586)
+targets = [ExtResource("13_6g0pr"), ExtResource("14_l8grx"), ExtResource("15_orgwb"), ExtResource("16_eta4h"), ExtResource("16_0nn2d")]
+
+[node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("10_abrae")]
+position = Vector2(2604, 662)
+targets = [ExtResource("17_xl256")]
+
+[node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("10_abrae")]
+position = Vector2(2008, 737)
+targets = [ExtResource("18_jk0n1"), ExtResource("19_y328p"), ExtResource("20_v6fuo"), ExtResource("21_8sop2"), ExtResource("22_tr4g0"), ExtResource("16_0nn2d")]
+
+[node name="TargetSpawnerRoadBottom" parent="Targets" instance=ExtResource("10_abrae")]
+position = Vector2(2321, 880)
+targets = [ExtResource("18_jk0n1"), ExtResource("19_y328p"), ExtResource("20_v6fuo"), ExtResource("21_8sop2"), ExtResource("22_tr4g0"), ExtResource("16_0nn2d")]
+
+[node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("10_abrae")]
+position = Vector2(1944, 1013)
+targets = [ExtResource("13_6g0pr"), ExtResource("14_l8grx"), ExtResource("15_orgwb"), ExtResource("16_eta4h"), ExtResource("16_0nn2d")]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = -500.0
+offset_top = -500.0
+offset_right = -372.0
+offset_bottom = -474.0
+theme_override_fonts/font = ExtResource("23_l3wfv")
+text = "Score: ?"
+vertical_alignment = 1
+
+[node name="AmmoLabel" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 24.0
+offset_right = 135.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_l3wfv")
+text = "Ammo: ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StreakLabel" type="Label" parent="."]
+offset_left = 207.0
+offset_top = 24.0
+offset_right = 351.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_l3wfv")
+text = "Streak: ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MultiplierLabel" type="Label" parent="."]
+offset_left = -500.0
+offset_top = -500.0
+offset_right = -276.0
+offset_bottom = -474.0
+theme_override_fonts/font = ExtResource("23_l3wfv")
+text = "Multiplier: x?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="rewards_collected" from="Bird" to="." method="_on_bird_rewards_collected"]
+[connection signal="shot_fired" from="Bird" to="." method="_on_bird_shot_fired"]
+[connection signal="streak_broken" from="Bird" to="." method="_on_bird_streak_broken"]

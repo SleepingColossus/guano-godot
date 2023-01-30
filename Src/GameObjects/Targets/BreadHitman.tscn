@@ -1,0 +1,169 @@
+[gd_scene load_steps=16 format=3 uid="uid://bnpsllva0ris7"]
+
+[ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_gwf6m"]
+[ext_resource type="Texture2D" uid="uid://cw01dv5jjf2f6" path="res://Sprites/Bread.png" id="2_o7kxw"]
+[ext_resource type="AudioStream" uid="uid://bgivvn30iimkl" path="res://Sound/HitBread.ogg" id="3_4rxhy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fqhd"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(0, 0, 45, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slv0k"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(45, 0, 45, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al7v3"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(90, 0, 45, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdpbo"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(135, 0, 45, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y88e"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(180, 0, 45, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pupm3"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(225, 0, 45, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0o4q"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(270, 0, 45, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5002n"]
+atlas = ExtResource("2_o7kxw")
+region = Rect2(315, 0, 45, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fqhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slv0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_al7v3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdpbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y88e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pupm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0o4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5002n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfs2m"]
+size = Vector2(34, 37)
+
+[sub_resource type="Animation" id="Animation_2nlfc"]
+resource_name = "death_animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"delete"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wc0di"]
+_data = {
+"death_animation": SubResource("Animation_2nlfc")
+}
+
+[node name="BreadHitman" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_gwf6m")
+target_name = "Toast"
+description = "Awards you will more ammuntion rather than score"
+movement_speed = -70
+ammo_awarded = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+frames = SubResource("SpriteFrames_4r2kj")
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -6.5)
+shape = SubResource("RectangleShape2D_cfs2m")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4rxhy")
+
+[node name="DeathAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wc0di")
+}
