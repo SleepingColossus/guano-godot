@@ -85,7 +85,7 @@ targets = [ExtResource("22_hqud8")]
 
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(2344, 586)
-targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo")]
+targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo"), ExtResource("14_072vv"), ExtResource("14_072vv")]
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(2604, 662)
@@ -101,7 +101,7 @@ targets = [ExtResource("15_ei8lp"), ExtResource("17_swbrj"), ExtResource("18_7eh
 
 [node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(1944, 1013)
-targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo")]
+targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo"), ExtResource("14_072vv"), ExtResource("14_072vv"), ExtResource("14_072vv"), ExtResource("14_072vv")]
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 6.0
