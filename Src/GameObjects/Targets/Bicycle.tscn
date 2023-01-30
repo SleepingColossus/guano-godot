@@ -122,7 +122,7 @@ script = ExtResource("1_s8kms")
 target_name = "Cyclist"
 description = "His fast speed and cap will not protect him from your bowel movement"
 movement_speed = -100
-score_awarded = 1
+score_awarded = 30
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

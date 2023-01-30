@@ -149,8 +149,8 @@ script = ExtResource("1_f2epv")
 target_name = "Woman"
 description = "That's a nice dress you have there. It would be a shame if something happened to it"
 movement_speed = -50
-score_awarded = 1
-ammo_awarded = 25
+score_awarded = 25
+ammo_awarded = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")

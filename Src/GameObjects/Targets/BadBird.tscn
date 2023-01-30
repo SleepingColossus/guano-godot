@@ -105,7 +105,7 @@ script = ExtResource("1_y4o0q")
 target_name = "Small Bird"
 description = "You'll probably hit it by accident"
 movement_speed = -100
-score_awarded = 1
+score_awarded = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")
