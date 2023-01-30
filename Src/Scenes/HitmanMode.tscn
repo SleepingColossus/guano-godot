@@ -86,7 +86,7 @@ targets = [ExtResource("11_sax61")]
 
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("10_abrae")]
 position = Vector2(2344, 586)
-targets = [ExtResource("13_6g0pr"), ExtResource("14_l8grx"), ExtResource("15_orgwb"), ExtResource("16_eta4h"), ExtResource("16_0nn2d")]
+targets = [ExtResource("13_6g0pr"), ExtResource("14_l8grx"), ExtResource("15_orgwb"), ExtResource("16_eta4h"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d")]
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("10_abrae")]
 position = Vector2(2604, 662)
@@ -94,15 +94,15 @@ targets = [ExtResource("17_xl256")]
 
 [node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("10_abrae")]
 position = Vector2(2008, 737)
-targets = [ExtResource("18_jk0n1"), ExtResource("19_y328p"), ExtResource("20_v6fuo"), ExtResource("21_8sop2"), ExtResource("22_tr4g0"), ExtResource("16_0nn2d")]
+targets = [ExtResource("18_jk0n1"), ExtResource("19_y328p"), ExtResource("20_v6fuo"), ExtResource("21_8sop2"), ExtResource("22_tr4g0"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d")]
 
 [node name="TargetSpawnerRoadBottom" parent="Targets" instance=ExtResource("10_abrae")]
 position = Vector2(2321, 880)
-targets = [ExtResource("18_jk0n1"), ExtResource("19_y328p"), ExtResource("20_v6fuo"), ExtResource("21_8sop2"), ExtResource("22_tr4g0"), ExtResource("16_0nn2d")]
+targets = [ExtResource("18_jk0n1"), ExtResource("19_y328p"), ExtResource("20_v6fuo"), ExtResource("21_8sop2"), ExtResource("22_tr4g0"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d")]
 
 [node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("10_abrae")]
 position = Vector2(1944, 1013)
-targets = [ExtResource("13_6g0pr"), ExtResource("14_l8grx"), ExtResource("15_orgwb"), ExtResource("16_eta4h"), ExtResource("16_0nn2d")]
+targets = [ExtResource("13_6g0pr"), ExtResource("14_l8grx"), ExtResource("15_orgwb"), ExtResource("16_eta4h"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d"), ExtResource("16_0nn2d")]
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = -500.0
