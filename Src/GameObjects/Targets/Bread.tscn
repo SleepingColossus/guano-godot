@@ -149,7 +149,7 @@ script = ExtResource("1_g15td")
 target_name = "Toast"
 description = "Awards you will more ammuntion rather than score"
 movement_speed = -140
-ammo_awarded = 5
+ammo_awarded = 10
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")
