@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmtsthotxx3o8"]
+[gd_scene load_steps=12 format=3 uid="uid://dmtsthotxx3o8"]
 
 [ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_wsrsv"]
 [ext_resource type="Texture2D" uid="uid://nfjqwk2kymtl" path="res://Sprites/Car2.png" id="2_0w8jc"]
+[ext_resource type="AudioStream" uid="uid://1de1e30rb2ns" path="res://Sound/Hit.ogg" id="3_k78dj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pxsxv"]
 atlas = ExtResource("2_0w8jc")
@@ -95,6 +96,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wc0di"]
 _data = {
@@ -117,6 +130,9 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_dgmli")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k78dj")
 
 [node name="DeathAnimation" type="AnimationPlayer" parent="."]
 libraries = {
