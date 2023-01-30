@@ -177,7 +177,7 @@ script = ExtResource("1_k6cv7")
 target_name = "Skater"
 description = "Could do a sick kickflip. But then he took a curb to the knee"
 movement_speed = -80
-score_awarded = 15
+score_awarded = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_4r2kj")
