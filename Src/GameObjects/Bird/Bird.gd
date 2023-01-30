@@ -27,16 +27,16 @@ var current_streak := 0
 @onready var container = get_tree().get_root()
 
 func _ready():
-    # initialize UI
-    # rewards_collected.emit(score, ammo, streak, score_multiplier)
-
-    death_timer_duration = death_timer.wait_time
-
     if hitman_mode:
         ammo = ammo_hitman
         modulate = Color(1, 0, 0)
     else:
         ammo = ammo_endless
+
+    # initialize UI
+    rewards_collected.emit(score, ammo, current_streak, score_multiplier)
+
+    death_timer_duration = death_timer.wait_time
 
 func _process(_delta):
 
