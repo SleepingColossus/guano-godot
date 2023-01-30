@@ -6,11 +6,16 @@ signal shot_fired(ammo_remaining: int)
 signal rewards_collected(score: int, ammo: int, streak: int, multiplier: int)
 signal streak_broken(streak: int, multiplier: int)
 
+enum Mode {
+    ENDLESS,
+    CHALLENGE
+}
+
 @export var projectile : PackedScene
 
-@export var hitman_mode := false
+@export var mode : Mode = Mode.ENDLESS
 @export var ammo_endless := 8
-@export var ammo_hitman := 3
+@export var ammo_challenge := 3
 var ammo : int
 
 var ready_to_fire := true
@@ -27,9 +32,8 @@ var current_streak := 0
 @onready var container = get_tree().get_root()
 
 func _ready():
-    if hitman_mode:
-        ammo = ammo_hitman
-        modulate = Color(1, 0, 0)
+    if mode != Mode.ENDLESS:
+        ammo = ammo_challenge
     else:
         ammo = ammo_endless
 
@@ -58,8 +62,8 @@ func _process(_delta):
 func target_hit(target: Target):
 
     # in hitman mode only bread should increase the streak
-    if hitman_mode:
-        if target.ammo_awarded > 0:
+    if mode != Mode.ENDLESS:
+        if target.is_marked:
             current_streak += 1
         else:
             current_streak = 0

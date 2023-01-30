@@ -30,7 +30,7 @@ script = ExtResource("1_rivyt")
 [node name="Bird" parent="." instance=ExtResource("2_eg83q")]
 unique_name_in_owner = true
 position = Vector2(143, 123)
-hitman_mode = true
+mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_x3cx7")

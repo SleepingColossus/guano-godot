@@ -10,6 +10,9 @@ extends CharacterBody2D
 @export var score_awarded : int
 @export var ammo_awarded : int
 
+# used in challenge modes
+@export var is_marked : bool
+
 @onready var collider : CollisionShape2D = $CollisionShape2D
 @onready var animation : AnimationPlayer = $DeathAnimation
 
@@ -33,6 +36,9 @@ func _process(_delta):
     else:
         if global_position.x > screen_width:
             queue_free()
+
+    if is_marked:
+        $AnimatedSprite2D.modulate = Color(1, 0, 0)
 
 func die():
     collider.set_deferred("disabled", true)

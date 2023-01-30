@@ -150,9 +150,9 @@ target_name = "Toast"
 description = "Awards you will more ammuntion rather than score"
 movement_speed = -70
 ammo_awarded = 1
+is_marked = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 0, 0, 1)
 frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 

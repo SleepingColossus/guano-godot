@@ -5,6 +5,7 @@ extends Node2D
 @onready var cooldown_timer := $Cooldown
 
 @export var reverse : bool
+@export var mark_targets : bool
 
 @export var targets : Array[PackedScene]
 
@@ -20,6 +21,11 @@ func spawn():
 
     var target = targets[rand_index].instantiate()
     target.reverse = reverse
+
+    if mark_targets:
+        target.is_marked = mark_targets
+        target.ammo_awarded = 1
+
     target.global_position = global_position
     container.add_child.call_deferred(target)
 
