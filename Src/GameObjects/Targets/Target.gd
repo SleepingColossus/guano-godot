@@ -13,16 +13,26 @@ extends CharacterBody2D
 @onready var collider : CollisionShape2D = $CollisionShape2D
 @onready var animation : AnimationPlayer = $DeathAnimation
 
-var destroy_offset := 200
+var screen_width : int
+var destroy_offset := 500
+var reverse : bool
 
 func _ready():
-    velocity = Vector2(movement_speed, 0)
+    var window_size = get_viewport_rect().size
+    screen_width = window_size.x + destroy_offset
+
+    var final_speed = -movement_speed if reverse else movement_speed
+    velocity = Vector2(final_speed, 0)
 
 func _process(_delta):
     move_and_slide()
 
-    if global_position.x < -destroy_offset:
-        queue_free()
+    if not reverse:
+        if global_position.x < -destroy_offset:
+            queue_free()
+    else:
+        if global_position.x > screen_width:
+            queue_free()
 
 func die():
     collider.set_deferred("disabled", true)

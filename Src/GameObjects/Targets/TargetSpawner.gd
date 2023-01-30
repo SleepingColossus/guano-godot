@@ -4,6 +4,8 @@ extends Node2D
 @export var cooldown_max : int
 @onready var cooldown_timer := $Cooldown
 
+@export var reverse : bool
+
 @export var targets : Array[PackedScene]
 
 # containers for projectile instances
@@ -17,6 +19,7 @@ func spawn():
     var rand_index : int = randi() % targets.size()
 
     var target = targets[rand_index].instantiate()
+    target.reverse = reverse
     target.global_position = global_position
     container.add_child.call_deferred(target)
 
