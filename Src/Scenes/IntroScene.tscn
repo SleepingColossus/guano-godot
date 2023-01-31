@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0kbjrkl13gw7"]
+
+[ext_resource type="Texture2D" uid="uid://bdgefkwevp7tj" path="res://Sprites/BirdIntroIdle.png" id="1_6yoic"]
+[ext_resource type="Script" path="res://Scenes/IntroHandler.gd" id="1_btd51"]
+[ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="2_d8ekg"]
+[ext_resource type="Texture2D" uid="uid://dv52fb84nidf8" path="res://Sprites/BirdIntroStare.png" id="2_uodd3"]
+[ext_resource type="Texture2D" uid="uid://7wnvth4wgsom" path="res://Sprites/BirdIntroWink.png" id="3_3dir1"]
+[ext_resource type="AudioStream" uid="uid://bxi81al43erre" path="res://Sound/Wink.ogg" id="4_ilyny"]
+
+[sub_resource type="Animation" id="Animation_2gaa2"]
+resource_name = "default"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BirdIntroIdle:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BirdIntroStare:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BirdIntroWink:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"load_next_scene"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vyn34"]
+_data = {
+"default": SubResource("Animation_2gaa2")
+}
+
+[node name="IntroScene" type="Node2D"]
+script = ExtResource("1_btd51")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 200.0
+offset_top = 94.0
+offset_right = 1708.0
+offset_bottom = 149.0
+theme_override_fonts/font = ExtResource("2_d8ekg")
+theme_override_font_sizes/font_size = 52
+text = "Cloudy With a Chance of Guano"
+
+[node name="PressAnyKey" type="Label" parent="."]
+offset_left = 775.0
+offset_top = 905.0
+offset_right = 1175.0
+offset_bottom = 928.0
+theme_override_fonts/font = ExtResource("2_d8ekg")
+text = "Press any key to continue"
+
+[node name="BirdIntroIdle" type="Sprite2D" parent="."]
+position = Vector2(900, 600)
+texture = ExtResource("1_6yoic")
+
+[node name="BirdIntroStare" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(900, 600)
+texture = ExtResource("2_uodd3")
+
+[node name="BirdIntroWink" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(900, 600)
+texture = ExtResource("3_3dir1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ilyny")
+
+[node name="IntroAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vyn34")
+}
