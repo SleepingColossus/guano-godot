@@ -18,7 +18,7 @@ enum Mode {
 @export var ammo_challenge := 3
 var ammo : int
 
-var ready_to_fire := true
+var ready_to_fire := false
 @onready var cooldown_timer := $Cooldown
 @onready var death_timer := $DeathTimer
 var death_timer_duration : int

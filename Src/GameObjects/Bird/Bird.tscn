@@ -49,6 +49,7 @@ ammo_endless = 15
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 0.2
+autostart = true
 
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 3.0
