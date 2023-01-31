@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cloudy With a Chance of Guano"
-run/main_scene="res://Scenes/GameModes/EndlessMode.tscn"
+run/main_scene="res://Scenes/Intro/IntroScene.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
