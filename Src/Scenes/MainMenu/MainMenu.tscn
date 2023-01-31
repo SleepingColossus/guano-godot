@@ -1,0 +1,127 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw6673av24r6n"]
+
+[ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="1_6abvt"]
+[ext_resource type="Script" path="res://Scenes/MainMenu/MainMenuHandler.gd" id="1_dso1i"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dso1i")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 1552.0
+offset_bottom = 275.0
+theme_override_fonts/font = ExtResource("1_6abvt")
+theme_override_font_sizes/font_size = 72
+text = "Select Game Mode"
+
+[node name="MenuItems" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 355.0
+offset_right = 1420.0
+offset_bottom = 946.0
+
+[node name="Endless" type="VBoxContainer" parent="MenuItems"]
+layout_mode = 2
+
+[node name="Name" type="MenuButton" parent="MenuItems/Endless"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+theme_override_font_sizes/font_size = 46
+text = "1. Endless"
+
+[node name="Description" type="Label" parent="MenuItems/Endless"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+text = "Get a high score before your ammo runs out
+
+
+"
+horizontal_alignment = 1
+
+[node name="Reverse" type="VBoxContainer" parent="MenuItems"]
+layout_mode = 2
+
+[node name="Name" type="MenuButton" parent="MenuItems/Reverse"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+theme_override_font_sizes/font_size = 46
+text = "2. Reverse
+"
+
+[node name="Description" type="Label" parent="MenuItems/Reverse"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+text = "Traffic flows backwards
+
+
+"
+horizontal_alignment = 1
+
+[node name="Sharpshooter" type="VBoxContainer" parent="MenuItems"]
+layout_mode = 2
+
+[node name="Name" type="MenuButton" parent="MenuItems/Sharpshooter"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+theme_override_font_sizes/font_size = 46
+text = "3. Sharpshooter"
+
+[node name="Description" type="Label" parent="MenuItems/Sharpshooter"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+text = "Get a high streak by not missing any targets
+
+
+"
+horizontal_alignment = 1
+
+[node name="Breadhunter" type="VBoxContainer" parent="MenuItems"]
+layout_mode = 2
+
+[node name="Name" type="MenuButton" parent="MenuItems/Breadhunter"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+theme_override_font_sizes/font_size = 46
+text = "4. Breadhunter"
+
+[node name="Description" type="Label" parent="MenuItems/Breadhunter"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+text = "Only bread is marked for termination. Get a high streak
+
+
+"
+horizontal_alignment = 1
+
+[node name="Hitman" type="VBoxContainer" parent="MenuItems"]
+layout_mode = 2
+
+[node name="Name" type="MenuButton" parent="MenuItems/Hitman"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+theme_override_font_sizes/font_size = 46
+text = "5. Hitman"
+
+[node name="Description" type="Label" parent="MenuItems/Hitman"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6abvt")
+text = "Hunt down the marked targets before they get away
+
+
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MenuItems/Endless/Name" to="." method="_on_endless_pressed"]
+[connection signal="pressed" from="MenuItems/Reverse/Name" to="." method="_on_reverse_pressed"]
+[connection signal="pressed" from="MenuItems/Sharpshooter/Name" to="." method="_on_sharpshooter_pressed"]
+[connection signal="pressed" from="MenuItems/Breadhunter/Name" to="." method="_on_breadhunter_pressed"]
+[connection signal="pressed" from="MenuItems/Hitman/Name" to="." method="_on_hitman_pressed"]
