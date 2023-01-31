@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://cfs4i2i5ue4i2"]
+
+[ext_resource type="Texture2D" uid="uid://b6bqe4geop84w" path="res://Sprites/Bird.png" id="1_dsxy8"]
+[ext_resource type="Script" path="res://GameObjects/Bird/BirdGameOver.gd" id="1_ox8v5"]
+[ext_resource type="AudioStream" uid="uid://3w5jf7g5hog1" path="res://Sound/BirdFalling.ogg" id="2_6revc"]
+[ext_resource type="AudioStream" uid="uid://bh1fpr42ncc2m" path="res://Sound/BirdCrash.ogg" id="3_cwdn0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge5rm"]
+atlas = ExtResource("1_dsxy8")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhsos"]
+atlas = ExtResource("1_dsxy8")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uqi4"]
+atlas = ExtResource("1_dsxy8")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy3n0"]
+atlas = ExtResource("1_dsxy8")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7c6r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge5rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhsos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uqi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hy3n0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo6ag"]
+size = Vector2(49, 19)
+
+[node name="Bird" type="RigidBody2D"]
+position = Vector2(169, 84)
+gravity_scale = 0.1
+max_contacts_reported = 1
+contact_monitor = true
+linear_velocity = Vector2(200, 0)
+angular_velocity = 15.0
+script = ExtResource("1_ox8v5")
+
+[node name="Bird" type="AnimatedSprite2D" parent="."]
+rotation = 0.785398
+frames = SubResource("SpriteFrames_n7c6r")
+playing = true
+
+[node name="FallingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_6revc")
+autoplay = true
+
+[node name="CrashSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cwdn0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 0.5)
+shape = SubResource("RectangleShape2D_vo6ag")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

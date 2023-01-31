@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://bq7cmb5qpkn28"
+uid="uid://bh1fpr42ncc2m"
 path="res://.godot/imported/BirdCrash.ogg-e9734cd6681aecc4f4f5b733ec9e40e2.oggvorbisstr"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/BirdCrash.ogg-e9734cd6681aecc4f4f5b733ec9e40e
 
 [params]
 
-loop=true
-loop_offset=0
-bpm=0
+loop=false
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
