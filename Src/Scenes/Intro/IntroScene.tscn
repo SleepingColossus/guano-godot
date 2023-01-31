@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0kbjrkl13gw7"]
+[gd_scene load_steps=9 format=3 uid="uid://bhwwp4dl5retp"]
 
 [ext_resource type="Texture2D" uid="uid://bdgefkwevp7tj" path="res://Sprites/BirdIntroIdle.png" id="1_6yoic"]
-[ext_resource type="Script" path="res://Scenes/IntroHandler.gd" id="1_btd51"]
+[ext_resource type="Script" path="res://Scenes/Intro/IntroHandler.gd" id="1_btd51"]
 [ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="2_d8ekg"]
 [ext_resource type="Texture2D" uid="uid://dv52fb84nidf8" path="res://Sprites/BirdIntroStare.png" id="2_uodd3"]
 [ext_resource type="Texture2D" uid="uid://7wnvth4wgsom" path="res://Sprites/BirdIntroWink.png" id="3_3dir1"]

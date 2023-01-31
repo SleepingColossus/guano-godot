@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://bqj5nu2uthw63"]
+[gd_scene load_steps=24 format=3]
 
-[ext_resource type="Script" path="res://Scenes/UIHandler.gd" id="1_urwxj"]
+[ext_resource type="Script" path="res://Scenes/GameModes/UIHandler.gd" id="1_urwxj"]
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="2_2y15n"]
 [ext_resource type="AudioStream" uid="uid://cc1jms5ecphpa" path="res://Music/GuanoRemakeBGM1.ogg" id="3_k68n1"]
 [ext_resource type="PackedScene" uid="uid://ba40nt4sg0qam" path="res://GameObjects/Roads/RoadSpawner.tscn" id="4_gxuhv"]

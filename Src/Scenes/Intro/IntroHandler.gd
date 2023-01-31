@@ -6,4 +6,4 @@ func _process(delta):
         $IntroAnimation.play("default")
 
 func load_next_scene():
-    get_tree().change_scene_to_file("res://Scenes/Help.tscn")
+    get_tree().change_scene_to_file("res://Scenes/Help/Help.tscn")

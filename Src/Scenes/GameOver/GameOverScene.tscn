@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://db8daeomm85fd"]
+[gd_scene load_steps=5 format=3 uid="uid://jhtmfsik33an"]
 
-[ext_resource type="Script" path="res://Scenes/GameOverHandler.gd" id="1_cs6we"]
+[ext_resource type="Script" path="res://Scenes/GameOver/GameOverHandler.gd" id="1_cs6we"]
 [ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="2_q3r1h"]
 [ext_resource type="PackedScene" uid="uid://cfs4i2i5ue4i2" path="res://GameObjects/Bird/BirdGameOver.tscn" id="3_1xmyn"]
 

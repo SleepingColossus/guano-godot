@@ -1,6 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://chpwwy2jst3ia"]
+[gd_scene load_steps=25 format=3]
 
-[ext_resource type="Script" path="res://Scenes/UIHandler.gd" id="1_yocbo"]
+[ext_resource type="Script" path="res://Scenes/GameModes/UIHandler.gd" id="1_yocbo"]
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="2_6agbg"]
 [ext_resource type="AudioStream" uid="uid://cc1jms5ecphpa" path="res://Music/GuanoRemakeBGM1.ogg" id="3_ra3xn"]
 [ext_resource type="PackedScene" uid="uid://ba40nt4sg0qam" path="res://GameObjects/Roads/RoadSpawner.tscn" id="4_p761u"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dgdvvad001x8" path="res://GameObjects/Clouds/Cloud2.tscn" id="7_2hmh4"]
 [ext_resource type="PackedScene" uid="uid://ho8kr7jllvqv" path="res://GameObjects/Clouds/Cloud3.tscn" id="8_is04b"]
 [ext_resource type="PackedScene" uid="uid://b8x60ftyn8tub" path="res://GameObjects/Clouds/Cloud1.tscn" id="9_1f442"]
-[ext_resource type="Script" path="res://Scenes/HitmanManager.gd" id="10_ds2ar"]
+[ext_resource type="Script" path="res://Scenes/GameModes/HitmanManager.gd" id="10_ds2ar"]
 [ext_resource type="PackedScene" uid="uid://cpa2hvc8g0qew" path="res://GameObjects/Targets/TargetSpawner.tscn" id="10_sp523"]
 [ext_resource type="PackedScene" uid="uid://dk2fhwtiyx2vf" path="res://GameObjects/Targets/BadBird.tscn" id="11_3yr4x"]
 [ext_resource type="PackedScene" uid="uid://bgmlh00ibo5su" path="res://GameObjects/Targets/Bread.tscn" id="12_mvti6"]
