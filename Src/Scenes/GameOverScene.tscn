@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://db8daeomm85fd"]
+
+[ext_resource type="Script" path="res://Scenes/GameOverHandler.gd" id="1_cs6we"]
+[ext_resource type="FontFile" uid="uid://cql18wfhkqirx" path="res://Fonts/PRESSSTART2P.TTF" id="2_q3r1h"]
+
+[node name="GameOverScene" type="Node2D"]
+script = ExtResource("1_cs6we")
+
+[node name="GameOver" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 200.0
+offset_right = 1248.0
+offset_bottom = 275.0
+theme_override_fonts/font = ExtResource("2_q3r1h")
+theme_override_font_sizes/font_size = 72
+text = "GAME OVER"
+
+[node name="PressAnyKey" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 812.0
+offset_right = 1134.0
+offset_bottom = 835.0
+theme_override_fonts/font = ExtResource("2_q3r1h")
+text = "Press any key to restart"
