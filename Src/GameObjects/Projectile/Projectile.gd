@@ -14,7 +14,7 @@ func _ready():
     screen_height = window_size.y + 100
 
 func _process(_delta):
-    if position.y > screen_height:
+    if global_position.y > screen_height:
         missed.emit()
         queue_free()
 

@@ -27,10 +27,6 @@ var score := 0
 var score_multiplier := 1
 var current_streak := 0
 
-# containers for projectile instances
-# used in order to detach projectiles from player's coordinate system
-@onready var container = get_tree().get_root()
-
 func _ready():
     if mode != Mode.ENDLESS:
         ammo = ammo_challenge
@@ -49,8 +45,7 @@ func _process(_delta):
         ready_to_fire = false
 
         var p = projectile.instantiate()
-        p.global_position = global_position
-        container.add_child(p)
+        add_child(p)
         p.missed.connect(target_missed)
 
         cooldown_timer.start()

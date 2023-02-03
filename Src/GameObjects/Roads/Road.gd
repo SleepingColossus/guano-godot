@@ -10,5 +10,5 @@ func _ready():
 func _process(_delta):
     move_and_slide()
 
-    if position.x < -sprite_width:
+    if global_position.x < -sprite_width:
         queue_free()

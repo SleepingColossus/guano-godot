@@ -12,10 +12,6 @@ class_name TargetSpawner
 
 @export var targets : Array[PackedScene]
 
-# containers for projectile instances
-# used in order to detach projectiles from player's coordinate system
-@onready var container = get_tree().get_root()
-
 func _ready():
     spawn()
 
@@ -32,8 +28,7 @@ func spawn():
     if mark_single:
         mark_targets = false
 
-    target.global_position = global_position
-    container.add_child.call_deferred(target)
+    add_child.call_deferred(target)
 
     var rand_cooldown : int = randi_range(cooldown_min, cooldown_max)
     cooldown_timer.wait_time = rand_cooldown

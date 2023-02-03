@@ -10,5 +10,5 @@ func _ready():
 func _process(_delta):
     move_and_slide()
 
-    if position.x < -destroy_offset:
+    if global_position.x < -destroy_offset:
         queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3]
+[gd_scene load_steps=25 format=3 uid="uid://duqngv2mnt1je"]
 
 [ext_resource type="Script" path="res://Scenes/GameModes/UIHandler.gd" id="1_yocbo"]
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="2_6agbg"]
