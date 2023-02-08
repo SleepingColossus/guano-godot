@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=3]
+[gd_scene load_steps=24 format=3 uid="uid://cj6bh24ndoq53"]
 
 [ext_resource type="Script" path="res://Scenes/GameModes/UIHandler.gd" id="1_urwxj"]
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="2_2y15n"]
-[ext_resource type="AudioStream" uid="uid://cc1jms5ecphpa" path="res://Music/GuanoRemakeBGM1.ogg" id="3_k68n1"]
+[ext_resource type="AudioStream" uid="uid://dae3cmi0eppkp" path="res://Music/GuanoRemakeBGM2.ogg" id="3_aspid"]
 [ext_resource type="PackedScene" uid="uid://ba40nt4sg0qam" path="res://GameObjects/Roads/RoadSpawner.tscn" id="4_gxuhv"]
 [ext_resource type="PackedScene" uid="uid://jexburvvu6qg" path="res://GameObjects/Roads/Road.tscn" id="5_u0uaw"]
 [ext_resource type="PackedScene" uid="uid://dcvl7p84hhypb" path="res://GameObjects/Clouds/CloudSpawner.tscn" id="6_6dmai"]
@@ -32,7 +32,7 @@ unique_name_in_owner = true
 position = Vector2(895, 123)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_k68n1")
+stream = ExtResource("3_aspid")
 autoplay = true
 
 [node name="Roads" type="Node2D" parent="."]
