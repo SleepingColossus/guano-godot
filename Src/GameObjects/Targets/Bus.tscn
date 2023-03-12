@@ -4,19 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://ca7oxq8hfbuwl" path="res://Sprites/Bus.png" id="2_icqoj"]
 [ext_resource type="AudioStream" uid="uid://1de1e30rb2ns" path="res://Sound/Hit.ogg" id="3_60miw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6wl0s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehd6y"]
 atlas = ExtResource("2_icqoj")
 region = Rect2(0, 0, 120, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m8v1v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m63d"]
 atlas = ExtResource("2_icqoj")
 region = Rect2(120, 0, 120, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_63lhp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o2ti"]
 atlas = ExtResource("2_icqoj")
 region = Rect2(240, 0, 120, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_stoal"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll4mv"]
 atlas = ExtResource("2_icqoj")
 region = Rect2(360, 0, 120, 64)
 
@@ -24,16 +24,16 @@ region = Rect2(360, 0, 120, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6wl0s")
+"texture": SubResource("AtlasTexture_ehd6y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m8v1v")
+"texture": SubResource("AtlasTexture_3m63d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_63lhp")
+"texture": SubResource("AtlasTexture_6o2ti")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_stoal")
+"texture": SubResource("AtlasTexture_ll4mv")
 }],
 "loop": true,
 "name": &"default",
