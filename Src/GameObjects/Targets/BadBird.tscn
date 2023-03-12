@@ -4,22 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://cal6j8hvvw1jd" path="res://Sprites/SmallBird.png" id="2_6bisn"]
 [ext_resource type="AudioStream" uid="uid://1de1e30rb2ns" path="res://Sound/Hit.ogg" id="3_kwanp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_deosb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj7sc"]
 atlas = ExtResource("2_6bisn")
-region = Rect2(0, 0, 30, 19)
+region = Rect2(0, 0, 16, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_177i8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8pak"]
 atlas = ExtResource("2_6bisn")
-region = Rect2(30, 0, 30, 19)
+region = Rect2(16, 0, 16, 10)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_deosb")
+"texture": SubResource("AtlasTexture_gj7sc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_177i8")
+"texture": SubResource("AtlasTexture_g8pak")
 }],
 "loop": true,
 "name": &"default",
@@ -108,6 +108,7 @@ movement_speed = -100
 score_awarded = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 

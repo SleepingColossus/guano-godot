@@ -15,6 +15,7 @@ script = ExtResource("1_r4m60")
 horizontal_velocity = -110
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("2_dvejh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

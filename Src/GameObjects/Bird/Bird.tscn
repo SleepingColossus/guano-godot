@@ -4,36 +4,36 @@
 [ext_resource type="Script" path="res://GameObjects/Bird/Bird.gd" id="2_y8gj8"]
 [ext_resource type="PackedScene" uid="uid://b1q81epf3wlrx" path="res://GameObjects/Projectile/Projectile.tscn" id="3_cowpu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ge5rm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6y4u"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(0, 0, 50, 50)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hhsos"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ph81"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(50, 0, 50, 50)
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7uqi4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_efb2p"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(100, 0, 50, 50)
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hy3n0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xomme"]
 atlas = ExtResource("1_2mwci")
-region = Rect2(150, 0, 50, 50)
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7c6r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ge5rm")
+"texture": SubResource("AtlasTexture_m6y4u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hhsos")
+"texture": SubResource("AtlasTexture_6ph81")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7uqi4")
+"texture": SubResource("AtlasTexture_efb2p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hy3n0")
+"texture": SubResource("AtlasTexture_xomme")
 }],
 "loop": true,
 "name": &"default",
@@ -41,6 +41,7 @@ animations = [{
 }]
 
 [node name="Bird" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
 frames = SubResource("SpriteFrames_n7c6r")
 playing = true
 script = ExtResource("2_y8gj8")

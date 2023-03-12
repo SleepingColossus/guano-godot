@@ -4,64 +4,64 @@
 [ext_resource type="Texture2D" uid="uid://cw01dv5jjf2f6" path="res://Sprites/Bread.png" id="2_o7kxw"]
 [ext_resource type="AudioStream" uid="uid://bgivvn30iimkl" path="res://Sound/HitBread.ogg" id="3_4rxhy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1fqhd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwcnp"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(0, 0, 45, 49)
+region = Rect2(0, 0, 32, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_slv0k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_42u11"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(45, 0, 45, 49)
+region = Rect2(32, 0, 32, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_al7v3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7q4r"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(90, 0, 45, 49)
+region = Rect2(64, 0, 32, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pdpbo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dljxg"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(135, 0, 45, 49)
+region = Rect2(96, 0, 32, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5y88e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5td3"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(180, 0, 45, 49)
+region = Rect2(128, 0, 32, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pupm3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykeg0"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(225, 0, 45, 49)
+region = Rect2(160, 0, 32, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o0o4q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o6tj"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(270, 0, 45, 49)
+region = Rect2(192, 0, 32, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5002n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ois5n"]
 atlas = ExtResource("2_o7kxw")
-region = Rect2(315, 0, 45, 49)
+region = Rect2(224, 0, 32, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1fqhd")
+"texture": SubResource("AtlasTexture_xwcnp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_slv0k")
+"texture": SubResource("AtlasTexture_42u11")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_al7v3")
+"texture": SubResource("AtlasTexture_q7q4r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pdpbo")
+"texture": SubResource("AtlasTexture_dljxg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5y88e")
+"texture": SubResource("AtlasTexture_c5td3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pupm3")
+"texture": SubResource("AtlasTexture_ykeg0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o0o4q")
+"texture": SubResource("AtlasTexture_2o6tj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5002n")
+"texture": SubResource("AtlasTexture_ois5n")
 }],
 "loop": true,
 "name": &"default",
@@ -153,6 +153,7 @@ ammo_awarded = 1
 is_marked = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 

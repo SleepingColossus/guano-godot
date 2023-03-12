@@ -1,95 +1,25 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxo64ti5br6gt"]
+[gd_scene load_steps=10 format=3 uid="uid://dxo64ti5br6gt"]
 
 [ext_resource type="Script" path="res://GameObjects/Targets/Target.gd" id="1_k6cv7"]
 [ext_resource type="Texture2D" uid="uid://c7un30bmnx5hu" path="res://Sprites/Skater.png" id="2_h2dyf"]
 [ext_resource type="AudioStream" uid="uid://1de1e30rb2ns" path="res://Sound/Hit.ogg" id="3_sw82g"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3hdgy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2hce"]
 atlas = ExtResource("2_h2dyf")
-region = Rect2(0, 0, 29, 56)
+region = Rect2(0, 0, 17, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6bss8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_af5nd"]
 atlas = ExtResource("2_h2dyf")
-region = Rect2(29, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b1bh4"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(58, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kcooo"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(87, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fdlw0"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(116, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ahyjj"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(145, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0xd2y"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(174, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mshu0"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(203, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5k1eh"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(232, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7lw2y"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(261, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0cw1w"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(290, 0, 29, 56)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g8ese"]
-atlas = ExtResource("2_h2dyf")
-region = Rect2(319, 0, 29, 56)
+region = Rect2(17, 0, 17, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3hdgy")
+"texture": SubResource("AtlasTexture_r2hce")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6bss8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b1bh4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kcooo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fdlw0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ahyjj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0xd2y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mshu0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5k1eh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7lw2y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0cw1w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g8ese")
+"texture": SubResource("AtlasTexture_af5nd")
 }],
 "loop": true,
 "name": &"default",
@@ -180,6 +110,7 @@ movement_speed = -80
 score_awarded = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 

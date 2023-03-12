@@ -4,64 +4,64 @@
 [ext_resource type="Texture2D" uid="uid://bc1yfywt37a5y" path="res://Sprites/Man1.png" id="2_wdtjl"]
 [ext_resource type="AudioStream" uid="uid://1de1e30rb2ns" path="res://Sound/Hit.ogg" id="3_ienn1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uueqm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_230jj"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(0, 0, 31, 50)
+region = Rect2(0, 0, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x5qye"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_alyvh"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(31, 0, 31, 50)
+region = Rect2(19, 0, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a4xmx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhsdl"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(62, 0, 31, 50)
+region = Rect2(38, 0, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2bpyb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1hks"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(93, 0, 31, 50)
+region = Rect2(57, 0, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2x2t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_75wub"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(124, 0, 31, 50)
+region = Rect2(76, 0, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3cin1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsltb"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(155, 0, 31, 50)
+region = Rect2(95, 0, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfg1x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hs86"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(186, 0, 31, 50)
+region = Rect2(114, 0, 19, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7a3c8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_shohb"]
 atlas = ExtResource("2_wdtjl")
-region = Rect2(217, 0, 31, 50)
+region = Rect2(133, 0, 19, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uueqm")
+"texture": SubResource("AtlasTexture_230jj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x5qye")
+"texture": SubResource("AtlasTexture_alyvh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a4xmx")
+"texture": SubResource("AtlasTexture_fhsdl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2bpyb")
+"texture": SubResource("AtlasTexture_m1hks")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v2x2t")
+"texture": SubResource("AtlasTexture_75wub")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3cin1")
+"texture": SubResource("AtlasTexture_xsltb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pfg1x")
+"texture": SubResource("AtlasTexture_1hs86")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7a3c8")
+"texture": SubResource("AtlasTexture_shohb")
 }],
 "loop": true,
 "name": &"default",
@@ -152,6 +152,7 @@ movement_speed = -50
 score_awarded = 25
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 

@@ -4,36 +4,36 @@
 [ext_resource type="Texture2D" uid="uid://dp76fgjbg18nj" path="res://Sprites/PostalVan.png" id="2_5x5l0"]
 [ext_resource type="AudioStream" uid="uid://1de1e30rb2ns" path="res://Sound/Hit.ogg" id="3_aiq8t"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rlu3i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t2yx"]
 atlas = ExtResource("2_5x5l0")
-region = Rect2(0, 0, 171, 85)
+region = Rect2(0, 0, 109, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oja58"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kshjr"]
 atlas = ExtResource("2_5x5l0")
-region = Rect2(171, 0, 171, 85)
+region = Rect2(109, 0, 109, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wpckk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4y63"]
 atlas = ExtResource("2_5x5l0")
-region = Rect2(342, 0, 171, 85)
+region = Rect2(218, 0, 109, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rf6wd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3etff"]
 atlas = ExtResource("2_5x5l0")
-region = Rect2(513, 0, 171, 85)
+region = Rect2(327, 0, 109, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4r2kj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rlu3i")
+"texture": SubResource("AtlasTexture_5t2yx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oja58")
+"texture": SubResource("AtlasTexture_kshjr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wpckk")
+"texture": SubResource("AtlasTexture_m4y63")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rf6wd")
+"texture": SubResource("AtlasTexture_3etff")
 }],
 "loop": true,
 "name": &"default",
@@ -124,6 +124,7 @@ movement_speed = -100
 score_awarded = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 
