@@ -41,17 +41,20 @@ position = Vector2(0, 4)
 [node name="RoadSpawner" parent="Roads" instance=ExtResource("4_4w3sh")]
 position = Vector2(3000, 475)
 
+[node name="Road5" parent="Roads" instance=ExtResource("5_b1n51")]
+position = Vector2(601, 475)
+
 [node name="Road" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(300, 475)
+position = Vector2(1, 475)
 
 [node name="Road4" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(2094, 475)
+position = Vector2(2400, 475)
 
 [node name="Road3" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(1494, 475)
+position = Vector2(1800, 475)
 
 [node name="Road2" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(894, 475)
+position = Vector2(1200, 475)
 
 [node name="Clouds" type="Node2D" parent="."]
 
