@@ -94,12 +94,12 @@ reverse = true
 targets = [ExtResource("11_ks5vu")]
 
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-200, 586)
+position = Vector2(-200, 634)
 reverse = true
 targets = [ExtResource("12_4kenk"), ExtResource("13_0xpee"), ExtResource("14_hueiu"), ExtResource("15_1so0h"), ExtResource("16_0dhg5"), ExtResource("12_4kenk"), ExtResource("12_4kenk")]
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-300, 662)
+position = Vector2(-300, 646)
 reverse = true
 targets = [ExtResource("17_6f2jy")]
 

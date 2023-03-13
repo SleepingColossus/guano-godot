@@ -96,11 +96,11 @@ cooldown_max = 20
 targets = [ExtResource("11_3yr4x")]
 
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("10_sp523")]
-position = Vector2(2344, 586)
+position = Vector2(2344, 634)
 targets = [ExtResource("12_mvti6"), ExtResource("13_dax2a"), ExtResource("14_wukad"), ExtResource("15_7n61d"), ExtResource("16_sy8gu")]
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("10_sp523")]
-position = Vector2(2604, 662)
+position = Vector2(2604, 646)
 targets = [ExtResource("17_0bbam")]
 
 [node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("10_sp523")]

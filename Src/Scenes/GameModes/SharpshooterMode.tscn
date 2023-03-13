@@ -95,12 +95,12 @@ mark_targets = true
 targets = [ExtResource("11_naens")]
 
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("10_fvfb5")]
-position = Vector2(2344, 586)
+position = Vector2(2344, 634)
 mark_targets = true
 targets = [ExtResource("12_7bbko"), ExtResource("13_v6d6s"), ExtResource("14_33pw7"), ExtResource("15_sbxis"), ExtResource("16_e4bpb")]
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("10_fvfb5")]
-position = Vector2(2604, 662)
+position = Vector2(2604, 646)
 mark_targets = true
 targets = [ExtResource("17_u2g4f")]
 
