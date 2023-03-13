@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3]
+[gd_scene load_steps=24 format=3 uid="uid://xm0rqw8qggw3"]
 
 [ext_resource type="Script" path="res://Scenes/GameModes/UIHandler.gd" id="1_3n2xl"]
 [ext_resource type="PackedScene" uid="uid://b6nccrbah3eqv" path="res://GameObjects/Bird/Bird.tscn" id="2_cupsj"]
@@ -42,11 +42,20 @@ position = Vector2(0, 4)
 [node name="RoadSpawner" parent="Roads" instance=ExtResource("4_y1iiv")]
 position = Vector2(3000, 475)
 
+[node name="Road5" parent="Roads" instance=ExtResource("5_3hq35")]
+position = Vector2(2400, 475)
+
+[node name="Road3" parent="Roads" instance=ExtResource("5_3hq35")]
+position = Vector2(1200, 475)
+
+[node name="Road4" parent="Roads" instance=ExtResource("5_3hq35")]
+position = Vector2(1800, 475)
+
 [node name="Road" parent="Roads" instance=ExtResource("5_3hq35")]
-position = Vector2(602, 475)
+position = Vector2(1, 475)
 
 [node name="Road2" parent="Roads" instance=ExtResource("5_3hq35")]
-position = Vector2(1802, 475)
+position = Vector2(600, 475)
 
 [node name="Clouds" type="Node2D" parent="."]
 
