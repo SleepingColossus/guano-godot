@@ -5,36 +5,36 @@
 [ext_resource type="AudioStream" uid="uid://3w5jf7g5hog1" path="res://Sound/BirdFalling.ogg" id="2_6revc"]
 [ext_resource type="AudioStream" uid="uid://bh1fpr42ncc2m" path="res://Sound/BirdCrash.ogg" id="3_cwdn0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ge5rm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmb1h"]
 atlas = ExtResource("1_dsxy8")
-region = Rect2(0, 0, 50, 50)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hhsos"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyrol"]
 atlas = ExtResource("1_dsxy8")
-region = Rect2(50, 0, 50, 50)
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7uqi4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ossh"]
 atlas = ExtResource("1_dsxy8")
-region = Rect2(100, 0, 50, 50)
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hy3n0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p65as"]
 atlas = ExtResource("1_dsxy8")
-region = Rect2(150, 0, 50, 50)
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7c6r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ge5rm")
+"texture": SubResource("AtlasTexture_jmb1h")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hhsos")
+"texture": SubResource("AtlasTexture_qyrol")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7uqi4")
+"texture": SubResource("AtlasTexture_5ossh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hy3n0")
+"texture": SubResource("AtlasTexture_p65as")
 }],
 "loop": true,
 "name": &"default",
@@ -55,6 +55,7 @@ script = ExtResource("1_ox8v5")
 
 [node name="Bird" type="AnimatedSprite2D" parent="."]
 rotation = 0.785398
+scale = Vector2(2, 2)
 frames = SubResource("SpriteFrames_n7c6r")
 playing = true
 
