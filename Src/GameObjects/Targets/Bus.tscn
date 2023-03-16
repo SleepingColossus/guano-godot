@@ -124,7 +124,7 @@ movement_speed = -100
 score_awarded = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
+scale = Vector2(1.75, 1.75)
 frames = SubResource("SpriteFrames_4r2kj")
 playing = true
 
