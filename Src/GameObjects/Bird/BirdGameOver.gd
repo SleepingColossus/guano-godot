@@ -9,3 +9,4 @@ func _on_body_entered(body):
 
         $FallingSound.stop()
         $CrashSound.play()
+        $Bird.stop()
