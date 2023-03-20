@@ -20,10 +20,6 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
-[editor]
-
-export/convert_text_resources_to_binary=true
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

@@ -125,8 +125,8 @@ score_awarded = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.75, 1.75)
-frames = SubResource("SpriteFrames_4r2kj")
-playing = true
+sprite_frames = SubResource("SpriteFrames_4r2kj")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -5.25)
