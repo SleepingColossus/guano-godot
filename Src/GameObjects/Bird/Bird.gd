@@ -93,4 +93,5 @@ func _on_cooldown_timeout():
 
 
 func _on_death_timer_timeout():
+    Global.final_score = score
     get_tree().change_scene_to_file("res://Scenes/GameOver/GameOverScene.tscn")

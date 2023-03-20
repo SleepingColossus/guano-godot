@@ -19,6 +19,14 @@ theme_override_fonts/font = ExtResource("2_q3r1h")
 theme_override_font_sizes/font_size = 72
 text = "GAME OVER"
 
+[node name="Score" type="Label" parent="."]
+offset_left = 806.0
+offset_top = 325.0
+offset_right = 1030.0
+offset_bottom = 348.0
+theme_override_fonts/font = ExtResource("2_q3r1h")
+text = "FINAL SCORE: 0"
+
 [node name="PressAnyKey" type="Label" parent="."]
 offset_left = 750.0
 offset_top = 812.0
