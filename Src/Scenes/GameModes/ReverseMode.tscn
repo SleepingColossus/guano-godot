@@ -29,7 +29,7 @@ script = ExtResource("1_urwxj")
 
 [node name="Bird" parent="." instance=ExtResource("2_2y15n")]
 unique_name_in_owner = true
-position = Vector2(895, 123)
+position = Vector2(600, 123)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_aspid")
@@ -39,32 +39,32 @@ autoplay = true
 position = Vector2(0, 4)
 
 [node name="RoadSpawner" parent="Roads" instance=ExtResource("4_gxuhv")]
-position = Vector2(3000, 475)
+position = Vector2(1501, 161)
 
 [node name="Road" parent="Roads" instance=ExtResource("5_u0uaw")]
-position = Vector2(1, 475)
+position = Vector2(1, 161)
 
 [node name="Road3" parent="Roads" instance=ExtResource("5_u0uaw")]
-position = Vector2(1200, 475)
+position = Vector2(601, 161)
 
 [node name="Road4" parent="Roads" instance=ExtResource("5_u0uaw")]
-position = Vector2(1800, 475)
+position = Vector2(901, 161)
 
 [node name="Road5" parent="Roads" instance=ExtResource("5_u0uaw")]
-position = Vector2(2400, 475)
+position = Vector2(1201, 161)
 
 [node name="Road2" parent="Roads" instance=ExtResource("5_u0uaw")]
-position = Vector2(600, 475)
+position = Vector2(301, 161)
 
 [node name="Clouds" type="Node2D" parent="."]
 
 [node name="CloudSpawners" type="Node2D" parent="Clouds"]
 
 [node name="CloudSpawnerTop" parent="Clouds/CloudSpawners" instance=ExtResource("6_6dmai")]
-position = Vector2(2056, 70)
+position = Vector2(1490, 94)
 
 [node name="CloudSpawnerBottom" parent="Clouds/CloudSpawners" instance=ExtResource("6_6dmai")]
-position = Vector2(2210, 233)
+position = Vector2(1498, 214)
 
 [node name="Cloud1" parent="Clouds" instance=ExtResource("7_1s3b4")]
 position = Vector2(752, 67)
@@ -87,36 +87,36 @@ position = Vector2(1680, 109)
 [node name="Targets" type="Node2D" parent="."]
 
 [node name="TargetSpawnerSky" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-218, 262)
+position = Vector2(-218, 210)
 cooldown_min = 10
 cooldown_max = 20
 reverse = true
-targets = [ExtResource("11_ks5vu")]
+targets = Array[PackedScene]([ExtResource("11_ks5vu")])
 
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-200, 634)
+position = Vector2(-200, 367)
 reverse = true
-targets = [ExtResource("12_4kenk"), ExtResource("13_0xpee"), ExtResource("14_hueiu"), ExtResource("15_1so0h"), ExtResource("16_0dhg5"), ExtResource("12_4kenk"), ExtResource("12_4kenk")]
+targets = Array[PackedScene]([ExtResource("12_4kenk"), ExtResource("13_0xpee"), ExtResource("14_hueiu"), ExtResource("15_1so0h"), ExtResource("16_0dhg5"), ExtResource("12_4kenk"), ExtResource("12_4kenk")])
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-300, 646)
+position = Vector2(-300, 366)
 reverse = true
-targets = [ExtResource("17_6f2jy")]
+targets = Array[PackedScene]([ExtResource("17_6f2jy")])
 
 [node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-150, 737)
+position = Vector2(-199, 422)
 reverse = true
-targets = [ExtResource("18_47sfv"), ExtResource("19_1uya2"), ExtResource("20_e3woh"), ExtResource("21_g7ltk"), ExtResource("22_s8vv0")]
+targets = Array[PackedScene]([ExtResource("18_47sfv"), ExtResource("19_1uya2"), ExtResource("20_e3woh"), ExtResource("21_g7ltk"), ExtResource("22_s8vv0")])
 
 [node name="TargetSpawnerRoadBottom" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-400, 880)
+position = Vector2(-400, 489)
 reverse = true
-targets = [ExtResource("18_47sfv"), ExtResource("19_1uya2"), ExtResource("20_e3woh"), ExtResource("21_g7ltk"), ExtResource("22_s8vv0")]
+targets = Array[PackedScene]([ExtResource("18_47sfv"), ExtResource("19_1uya2"), ExtResource("20_e3woh"), ExtResource("21_g7ltk"), ExtResource("22_s8vv0")])
 
 [node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("10_q3mef")]
-position = Vector2(-250, 1013)
+position = Vector2(-250, 549)
 reverse = true
-targets = [ExtResource("12_4kenk"), ExtResource("13_0xpee"), ExtResource("14_hueiu"), ExtResource("15_1so0h"), ExtResource("16_0dhg5"), ExtResource("12_4kenk"), ExtResource("12_4kenk"), ExtResource("12_4kenk"), ExtResource("12_4kenk")]
+targets = Array[PackedScene]([ExtResource("12_4kenk"), ExtResource("13_0xpee"), ExtResource("14_hueiu"), ExtResource("15_1so0h"), ExtResource("16_0dhg5"), ExtResource("12_4kenk"), ExtResource("12_4kenk"), ExtResource("12_4kenk"), ExtResource("12_4kenk")])
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 6.0
