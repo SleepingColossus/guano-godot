@@ -8,26 +8,31 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 204.0
+offset_top = 53.0
+offset_right = 204.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.572303, 0.572303)
 script = ExtResource("1_dso1i")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 200.0
-offset_right = 1552.0
-offset_bottom = 275.0
+offset_left = -61.0
+offset_top = 26.0
+offset_right = 1091.0
+offset_bottom = 101.0
 theme_override_fonts/font = ExtResource("1_6abvt")
 theme_override_font_sizes/font_size = 72
 text = "Select Game Mode"
 
 [node name="MenuItems" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 540.0
-offset_top = 355.0
-offset_right = 1420.0
-offset_bottom = 946.0
+offset_left = 79.0
+offset_top = 181.0
+offset_right = 959.0
+offset_bottom = 772.0
 
 [node name="Endless" type="VBoxContainer" parent="MenuItems"]
 layout_mode = 2
