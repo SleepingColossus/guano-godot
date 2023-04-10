@@ -87,7 +87,7 @@ position = Vector2(1680, 109)
 [node name="Targets" type="Node2D" parent="."]
 
 [node name="TargetSpawnerSky" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(2638, 280)
+position = Vector2(1438, 210)
 cooldown_min = 10
 cooldown_max = 20
 targets = Array[PackedScene]([ExtResource("22_hqud8")])
@@ -97,7 +97,7 @@ position = Vector2(1407, 367)
 targets = Array[PackedScene]([ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo"), ExtResource("14_072vv"), ExtResource("14_072vv")])
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("9_6xgsp")]
-position = Vector2(2606, 646)
+position = Vector2(1447, 366)
 targets = Array[PackedScene]([ExtResource("10_g40k6")])
 
 [node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("9_6xgsp")]
