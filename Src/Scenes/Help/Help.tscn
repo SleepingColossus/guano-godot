@@ -17,19 +17,22 @@
 [ext_resource type="PackedScene" uid="uid://dxo64ti5br6gt" path="res://GameObjects/Targets/Skater.tscn" id="13_tvmh5"]
 
 [node name="HintScene" type="Node2D"]
+position = Vector2(256, 0)
+scale = Vector2(0.524196, 0.524196)
 script = ExtResource("1_eins7")
 
 [node name="TitleLabel" type="Label" parent="."]
-offset_left = 657.0
+offset_left = 201.0
 offset_top = 57.0
-offset_right = 1161.0
+offset_right = 705.0
 offset_bottom = 132.0
 theme_override_fonts/font = ExtResource("1_d4e5d")
 theme_override_font_sizes/font_size = 72
 text = "TARGETS"
+metadata/_edit_use_anchors_ = true
 
 [node name="ColumnLeft" type="Node2D" parent="."]
-position = Vector2(400, 0)
+position = Vector2(-56, 0)
 
 [node name="TargetDescriptor" parent="ColumnLeft" instance=ExtResource("1_2xef6")]
 position = Vector2(0, 250)
@@ -49,7 +52,7 @@ position = Vector2(0, 850)
 target = ExtResource("5_eg7m5")
 
 [node name="ColumnMiddle" type="Node2D" parent="."]
-position = Vector2(1000, 0)
+position = Vector2(544, 0)
 
 [node name="TargetDescriptor" parent="ColumnMiddle" instance=ExtResource("1_2xef6")]
 position = Vector2(0, 250)
@@ -68,7 +71,7 @@ position = Vector2(0, 850)
 target = ExtResource("9_sjci3")
 
 [node name="ColumnRight" type="Node2D" parent="."]
-position = Vector2(1600, 0)
+position = Vector2(1144, 0)
 
 [node name="TargetDescriptor" parent="ColumnRight" instance=ExtResource("1_2xef6")]
 position = Vector2(0, 250)
