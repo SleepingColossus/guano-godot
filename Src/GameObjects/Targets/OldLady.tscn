@@ -124,7 +124,6 @@ movement_speed = -40
 score_awarded = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4r2kj")
 autoplay = "default"
 
