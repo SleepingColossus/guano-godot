@@ -79,27 +79,31 @@ _data = {
 }
 
 [node name="IntroScene" type="Node2D"]
+position = Vector2(224, 135)
+scale = Vector2(0.54027, 0.54027)
 script = ExtResource("1_btd51")
 
 [node name="Title" type="Label" parent="."]
-offset_left = 200.0
-offset_top = 94.0
-offset_right = 1708.0
-offset_bottom = 149.0
+offset_left = -224.0
+offset_top = -119.0
+offset_right = 1284.0
+offset_bottom = -64.0
 theme_override_fonts/font = ExtResource("2_d8ekg")
 theme_override_font_sizes/font_size = 52
 text = "Cloudy With a Chance of Guano"
+metadata/_edit_use_anchors_ = true
 
 [node name="PressAnyKey" type="Label" parent="."]
-offset_left = 775.0
-offset_top = 905.0
-offset_right = 1175.0
-offset_bottom = 928.0
+offset_left = 351.0
+offset_top = 692.0
+offset_right = 751.0
+offset_bottom = 715.0
 theme_override_fonts/font = ExtResource("2_d8ekg")
 text = "Press any key to continue"
+metadata/_edit_use_anchors_ = true
 
 [node name="BirdIntroIdle" type="Sprite2D" parent="."]
-position = Vector2(900, 600)
+position = Vector2(476, 387)
 texture = ExtResource("1_6yoic")
 
 [node name="BirdIntroStare" type="Sprite2D" parent="."]
