@@ -39,22 +39,22 @@ autoplay = true
 position = Vector2(0, 4)
 
 [node name="RoadSpawner" parent="Roads" instance=ExtResource("4_4w3sh")]
-position = Vector2(3000, 475)
+position = Vector2(1501, 161)
 
 [node name="Road5" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(601, 475)
+position = Vector2(301, 161)
 
 [node name="Road" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(1, 475)
+position = Vector2(1, 161)
 
 [node name="Road4" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(2400, 475)
+position = Vector2(1201, 161)
 
 [node name="Road3" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(1800, 475)
+position = Vector2(901, 161)
 
 [node name="Road2" parent="Roads" instance=ExtResource("5_b1n51")]
-position = Vector2(1200, 475)
+position = Vector2(601, 161)
 
 [node name="Clouds" type="Node2D" parent="."]
 
@@ -90,27 +90,27 @@ position = Vector2(1680, 109)
 position = Vector2(2638, 280)
 cooldown_min = 10
 cooldown_max = 20
-targets = [ExtResource("22_hqud8")]
+targets = Array[PackedScene]([ExtResource("22_hqud8")])
 
 [node name="TargetSpawnerSidewalkTop" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(2344, 634)
-targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo"), ExtResource("14_072vv"), ExtResource("14_072vv")]
+targets = Array[PackedScene]([ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo"), ExtResource("14_072vv"), ExtResource("14_072vv")])
 
 [node name="TargetSpawnerCycleLane" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(2606, 646)
-targets = [ExtResource("10_g40k6")]
+targets = Array[PackedScene]([ExtResource("10_g40k6")])
 
 [node name="TargetSpawnerRoadTop" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(2008, 737)
-targets = [ExtResource("15_ei8lp"), ExtResource("17_swbrj"), ExtResource("18_7ehmm"), ExtResource("19_ug24r"), ExtResource("20_qxhv0")]
+targets = Array[PackedScene]([ExtResource("15_ei8lp"), ExtResource("17_swbrj"), ExtResource("18_7ehmm"), ExtResource("19_ug24r"), ExtResource("20_qxhv0")])
 
 [node name="TargetSpawnerRoadBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(2321, 880)
-targets = [ExtResource("15_ei8lp"), ExtResource("17_swbrj"), ExtResource("18_7ehmm"), ExtResource("19_ug24r"), ExtResource("20_qxhv0")]
+targets = Array[PackedScene]([ExtResource("15_ei8lp"), ExtResource("17_swbrj"), ExtResource("18_7ehmm"), ExtResource("19_ug24r"), ExtResource("20_qxhv0")])
 
 [node name="TargetSpawnerSidewalkBottom" parent="Targets" instance=ExtResource("9_6xgsp")]
 position = Vector2(1944, 1013)
-targets = [ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo"), ExtResource("14_072vv"), ExtResource("14_072vv"), ExtResource("14_072vv"), ExtResource("14_072vv")]
+targets = Array[PackedScene]([ExtResource("14_072vv"), ExtResource("13_kb6tx"), ExtResource("11_rj0as"), ExtResource("13_ngjuq"), ExtResource("15_jywwo"), ExtResource("14_072vv"), ExtResource("14_072vv"), ExtResource("14_072vv"), ExtResource("14_072vv")])
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 6.0
