@@ -49,7 +49,7 @@ position = Vector2(1201, 161)
 position = Vector2(1, 161)
 
 [node name="Road3" parent="Roads" instance=ExtResource("5_ey0db")]
-position = Vector2(604, 161)
+position = Vector2(601, 161)
 
 [node name="Road4" parent="Roads" instance=ExtResource("5_ey0db")]
 position = Vector2(901, 161)
