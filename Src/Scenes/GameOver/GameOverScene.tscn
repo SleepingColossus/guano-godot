@@ -48,3 +48,4 @@ shape = SubResource("RectangleShape2D_h85sl")
 
 [node name="Bird" parent="." instance=ExtResource("3_1xmyn")]
 position = Vector2(-90, -198)
+linear_velocity = Vector2(100, 0)
