@@ -108,12 +108,12 @@ texture = ExtResource("1_6yoic")
 
 [node name="BirdIntroStare" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(900, 600)
+position = Vector2(476, 387)
 texture = ExtResource("2_uodd3")
 
 [node name="BirdIntroWink" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(900, 600)
+position = Vector2(476, 387)
 texture = ExtResource("3_3dir1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
