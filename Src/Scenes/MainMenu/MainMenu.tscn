@@ -33,6 +33,7 @@ offset_left = 79.0
 offset_top = 181.0
 offset_right = 959.0
 offset_bottom = 772.0
+scale = Vector2(0.8, 0.8)
 
 [node name="Endless" type="VBoxContainer" parent="MenuItems"]
 layout_mode = 2
