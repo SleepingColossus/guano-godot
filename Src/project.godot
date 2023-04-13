@@ -23,6 +23,7 @@ Global="*res://Scenes/GameOver/global.gd"
 
 window/size/viewport_width=1024
 window/size/viewport_height=576
+window/stretch/mode="viewport"
 
 [rendering]
 

@@ -88,3 +88,9 @@ target = ExtResource("12_hlkhl")
 [node name="TargetDescriptor4" parent="ColumnRight" instance=ExtResource("1_2xef6")]
 position = Vector2(0, 850)
 target = ExtResource("13_tvmh5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

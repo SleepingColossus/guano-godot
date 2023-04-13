@@ -25,7 +25,8 @@ offset_right = 1091.0
 offset_bottom = 101.0
 theme_override_fonts/font = ExtResource("1_6abvt")
 theme_override_font_sizes/font_size = 72
-text = "Select Game Mode"
+text = "Main Menu"
+horizontal_alignment = 1
 
 [node name="MenuItems" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -33,106 +34,50 @@ offset_left = 79.0
 offset_top = 181.0
 offset_right = 959.0
 offset_bottom = 772.0
-scale = Vector2(0.8, 0.8)
+alignment = 1
 
-[node name="Endless" type="VBoxContainer" parent="MenuItems"]
+[node name="Play" type="VBoxContainer" parent="MenuItems"]
 layout_mode = 2
 
-[node name="Name" type="MenuButton" parent="MenuItems/Endless"]
-layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_6abvt")
-theme_override_font_sizes/font_size = 46
-text = "1. Endless"
-
-[node name="Description" type="Label" parent="MenuItems/Endless"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6abvt")
-text = "Get a high score before your ammo runs out
-
-
-"
-horizontal_alignment = 1
-
-[node name="Reverse" type="VBoxContainer" parent="MenuItems"]
-layout_mode = 2
-
-[node name="Name" type="MenuButton" parent="MenuItems/Reverse"]
+[node name="Name" type="MenuButton" parent="MenuItems/Play"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_6abvt")
 theme_override_font_sizes/font_size = 46
-text = "2. Reverse
-"
+text = "Play"
 
-[node name="Description" type="Label" parent="MenuItems/Reverse"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6abvt")
-text = "Traffic flows backwards
-
-
-"
-horizontal_alignment = 1
-
-[node name="Sharpshooter" type="VBoxContainer" parent="MenuItems"]
+[node name="Help" type="VBoxContainer" parent="MenuItems"]
 layout_mode = 2
 
-[node name="Name" type="MenuButton" parent="MenuItems/Sharpshooter"]
+[node name="Name" type="MenuButton" parent="MenuItems/Help"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_6abvt")
 theme_override_font_sizes/font_size = 46
-text = "3. Sharpshooter"
+text = "Help"
 
-[node name="Description" type="Label" parent="MenuItems/Sharpshooter"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6abvt")
-text = "Get a high streak by not missing any targets
-
-
-"
-horizontal_alignment = 1
-
-[node name="Breadhunter" type="VBoxContainer" parent="MenuItems"]
+[node name="Fullscreen" type="VBoxContainer" parent="MenuItems"]
 layout_mode = 2
 
-[node name="Name" type="MenuButton" parent="MenuItems/Breadhunter"]
+[node name="Name" type="MenuButton" parent="MenuItems/Fullscreen"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_6abvt")
 theme_override_font_sizes/font_size = 46
-text = "4. Breadhunter"
+text = "Toggle Fullscreen"
 
-[node name="Description" type="Label" parent="MenuItems/Breadhunter"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6abvt")
-text = "Only bread is marked for termination. Get a high streak
-
-
-"
-horizontal_alignment = 1
-
-[node name="Hitman" type="VBoxContainer" parent="MenuItems"]
+[node name="Quit" type="VBoxContainer" parent="MenuItems"]
+visible = false
 layout_mode = 2
 
-[node name="Name" type="MenuButton" parent="MenuItems/Hitman"]
+[node name="Name" type="MenuButton" parent="MenuItems/Quit"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_6abvt")
 theme_override_font_sizes/font_size = 46
-text = "5. Hitman"
+text = "Quit"
 
-[node name="Description" type="Label" parent="MenuItems/Hitman"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6abvt")
-text = "Hunt down the marked targets before they get away
-
-
-"
-horizontal_alignment = 1
-
-[connection signal="pressed" from="MenuItems/Endless/Name" to="." method="_on_endless_pressed"]
-[connection signal="pressed" from="MenuItems/Reverse/Name" to="." method="_on_reverse_pressed"]
-[connection signal="pressed" from="MenuItems/Sharpshooter/Name" to="." method="_on_sharpshooter_pressed"]
-[connection signal="pressed" from="MenuItems/Breadhunter/Name" to="." method="_on_breadhunter_pressed"]
-[connection signal="pressed" from="MenuItems/Hitman/Name" to="." method="_on_hitman_pressed"]
+[connection signal="pressed" from="MenuItems/Play/Name" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuItems/Help/Name" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="MenuItems/Fullscreen/Name" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="MenuItems/Quit/Name" to="." method="_on_quit_pressed"]
